@@ -1,35 +1,29 @@
 import os
-from flask import Flask
-import pymongo
+from flask import Flask, render_template, redirect, request, url_for
+from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
 app = Flask(__name__)
+#connecting app to MongoDB using a environment variable
+app.config["MONGO_DBNAME"] = 'knowledge_is_power'
+app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
 
-#using the OS library to set a constant by using the getenv() method to read in the environment variable
-#also using the Python constants to access the database and collection
-MONGODB_URI = os.getenv("MONGO_URI")
-DBS_NAME = "knowledge_is_power"
-COLLECTION_NAME = "fundraisers"
+#creating an instance of PyMongo to set up making the connection MongoDB
+mongo = PyMongo(app)
 
-#Mongo connect function to print message is connection is successful or there is an error
-def mongo_connect(url):
-    try:
-        conn = pymongo.MongoClient(url)
-        print("Mongo is connected!")
-        return conn
-    except pymongo.errors.ConnectionFailure as e:
-        print("Could not connect to MongoDB: %s") % e
-        
-#calling the connect function to print everything in the database when called in terminal      
-        
-conn = mongo_connect(MONGODB_URI)
+#decorators and function that will display fundraisers from MongoDB on fundraisers page
+@app.route('/')
+@app.route('/get_fundraisers')
+def get_fundraisers():
+    return render_template("fundraisers.html", fundraisers=mongo.db.fundraisers.find())
+    
+    
+    
 
-coll = conn[DBS_NAME][COLLECTION_NAME]
-
-documents = coll.find()
-
-for doc in documents:
-    print(doc)   
+if __name__ == '__main__':
+    app.run(host=os.environ.get('IP'),
+        port=int(os.environ.get('PORT')),
+        debug=True)  
         
 
 
