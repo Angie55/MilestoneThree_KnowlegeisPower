@@ -21,6 +21,11 @@ def index():
 def get_fundraisers():
     return render_template("fundraisers.html", fundraisers=mongo.db.fundraisers.find())
     
+@app.route('/get_fundraisers/<fundraisers_id>')
+def fundraiser(fundraisers_id):
+   
+      return render_template("fundraiser-info.html", fundraiser=fundraisers_id)  
+    
     
     
 

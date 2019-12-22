@@ -1,0 +1,34 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="page-width-container">
+    <header>
+        <h1 class="text-align-center">Fundraiser Information page</h1>
+        
+    </header> 
+    
+    <hr>
+    
+    <main>
+        
+        <div class="container-fluid">
+          
+            <div class="row">
+                <div class="col-4">
+                    <img class="img-fluid" src="{{fundraiser.fundraiser_image}}"> 
+                </div>  
+                <div class="col-8">
+                    <h3>Fundraiser name</h3>
+                    <p>{{fundraiser.fundraiser_intro}}</p>
+                    <a class="btn btn-primary" href="{{ url_for('fundraiser', fundraisers_id=fundraiser._id) }}" role="button">Link</a>
+                </div> 
+            </div>
+          
+        </div>
+        
+        
+        
+    </main>
+
+</div>
+
+{% endblock %}

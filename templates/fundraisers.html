@@ -27,7 +27,7 @@
                 <div class="col-8">
                     <h3>{{fundraiser.fundraiser_name}}</h3>
                     <p>{{fundraiser.fundraiser_intro}}</p>
-                    <a class="btn btn-primary" href="#" role="button">Link</a>
+                    <a class="btn btn-primary" href="{{ url_for('fundraiser', fundraisers_id=fundraiser._id) }}" role="button">Link</a>
                 </div> 
             </div>
          {% endfor %}   
