@@ -13,6 +13,10 @@ mongo = PyMongo(app)
 
 #decorators and function that will display fundraisers from MongoDB on fundraisers page
 @app.route('/')
+@app.route('/index')
+def index():
+    return render_template("index.html")
+
 @app.route('/get_fundraisers')
 def get_fundraisers():
     return render_template("fundraisers.html", fundraisers=mongo.db.fundraisers.find())
