@@ -26,8 +26,9 @@ def get_fundraisers():
 #display of individual fundraiser using id   
 @app.route('/get_fundraisers/<fundraisers_id>')
 def fundraiser(fundraisers_id):
-      return render_template("fundraiser-info.html",
-                              fundraiser=fundraisers_id)  
+    fundraiser_info =  mongo.db.fundraisers.find_one({"_id": ObjectId(fundraisers_id)})
+    return render_template("fundraiser-info.html",
+                              fundraiser=fundraiser_info)  
     
 #displays the add fundraiser page with the form
 @app.route('/add_fundraiser')
@@ -39,7 +40,16 @@ def add_fundraiser():
 def insert_fundraiser():
     fundraisers = mongo.db.fundraisers
     fundraisers.insert_one(request.form.to_dict())
-    return redirect(url_for('get_fundraisers'))    
+    return redirect(url_for('get_fundraisers')) 
+    
+    
+    
+@app.route('/edit_fundraiser/<fundraiser_id>')
+def edit_fundraiser(fundraiser_id):
+    the_fundraiser =  mongo.db.fundraisers.find_one({"_id": ObjectId(fundraiser_id)})
+    return render_template('edit-fundraiser.html', fundraiser=the_fundraiser)    
+   
+                
     
 
 if __name__ == '__main__':
