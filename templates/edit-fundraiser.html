@@ -11,11 +11,11 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 <form action="{{ url_for('insert_fundraiser') }}" method="POST">
     <div class="form-group">
         <label for="name">Fundraiser Name/Title:</label>
-        <input type="text" name="fundraiser_name" class="form-control" id="fundraiser_name" required>
+        <input type="text" name="fundraiser_name" class="form-control" value="{{fundraiser.fundraiser_name}}" id="fundraiser_name" required>
     </div>
     <div class="form-group">
         <label for="target">Target amount to raise:</label>
-        <input type="text" name="fundraiser_target" class="form-control" id="fundraiser_target" required>
+        <input type="text" name="fundraiser_target" class="form-control" value="{{fundraiser.fundraiser_target}}" id="fundraiser_target" required>
     </div>
     <div class="form-group">
     <label for="country">Country of benificeries</label>
@@ -271,22 +271,22 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
     </div>
     <div class="form-group">
         <label for="fund-image">Fundraiser image:</label>
-        <input type="text" name="fundraiser_image" class="form-control" id="fundraiser_image" required>
+        <input type="text" name="fundraiser_image" class="form-control" value="{{fundraiser.fundraiser_image}}" id="fundraiser_image" required>
     </div>
     <div class="form-group">
         <label for="donation-link">Fundraiser donation page:</label>
-        <input type="text" name="fundraiser_website_link" class="form-control" id="fundraiser_website_link" required>
+        <input type="text" name="fundraiser_website_link" class="form-control" value="{{fundraiser.fundraiser_website_link}}" id="fundraiser_website_link" required>
     </div>
 
     <div class="form-group">
         <label for="fundraiser-intro">Fundraiser introduction</label>
-        <textarea class="form-control" name="fundraiser_intro" id="fundraiser_intro" rows="12">
+        <textarea class="form-control" name="fundraiser_intro" value="{{fundraiser.fundraiser_intro}}" id="fundraiser_intro" rows="12">
         </textarea> 
     </div>
     
      <div class="form-group">
         <label for="fundraiser-details">Fundraiser details</label>
-        <textarea class="form-control" name="fundraiser_details" id="fundraiser_details" rows="12">
+        <textarea class="form-control" name="fundraiser_details" value="{{fundraiser.fundraiser_details}}" id="fundraiser_details" rows="12">
         </textarea> 
     </div>
       
