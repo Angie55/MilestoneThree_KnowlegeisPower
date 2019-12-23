@@ -29,10 +29,17 @@ def fundraiser(fundraisers_id):
       return render_template("fundraiser-info.html",
                               fundraiser=fundraisers_id)  
     
-#display of individual fundraiser using id 
+#displays the add fundraiser page with the form
 @app.route('/add_fundraiser')
 def add_fundraiser():
     return render_template("add-fundraiser.html")
+    
+#inserts new fundraiser when form submitted    
+@app.route('/insert_fundraiser', methods=['POST'])
+def insert_fundraiser():
+    fundraisers = mongo.db.fundraisers
+    fundraisers.insert_one(request.form.to_dict())
+    return redirect(url_for('get_fundraisers'))    
     
 
 if __name__ == '__main__':
