@@ -11,7 +11,7 @@ app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
 #creating an instance of PyMongo to set up making the connection MongoDB
 mongo = PyMongo(app)
 
-#decorators and function that will display fundraisers from MongoDB on fundraisers page
+
 @app.route('/')
 @app.route('/index')
 def index():
@@ -19,14 +19,20 @@ def index():
 
 @app.route('/get_fundraisers')
 def get_fundraisers():
-    return render_template("fundraisers.html", fundraisers=mongo.db.fundraisers.find())
+    return render_template("fundraisers.html",
+                            fundraisers=mongo.db.fundraisers.find())
     
+    
+#display of individual fundraiser using id   
 @app.route('/get_fundraisers/<fundraisers_id>')
 def fundraiser(fundraisers_id):
-   
-      return render_template("fundraiser-info.html", fundraiser=fundraisers_id)  
+      return render_template("fundraiser-info.html",
+                              fundraiser=fundraisers_id)  
     
-    
+#display of individual fundraiser using id 
+@app.route('/add_fundraiser')
+def add_fundraiser():
+    return render_template("add-fundraiser.html")
     
 
 if __name__ == '__main__':
