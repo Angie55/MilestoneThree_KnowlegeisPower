@@ -12,20 +12,57 @@
 
 .nav-link-colour:hover {
     color: #ff8500;
-
 }
 
+/*--------------------------------- Header*/
+.header-hr {
+    background-color: #ff8500;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: 3px;
+    max-width: 50%;
+}
 
 h1 {
-    color: green;
+    text-align: center;
+    margin-top: 30px;
 }
 
-
-hr {
-    background-color: green;
+header p {
+    margin-top: 30px;
 }
 
+.header-button {
+    text-align: center;
+}
 
+/*--------------------------------- Fundraiser page*/
+
+
+.intro-fund-page {
+    margin-top: 30px;
+}
+
+.read-more-btn {
+    margin-top: 20px;
+}
+
+.btn-colour { 
+    background-color: #03ADDF;
+    color: white;
+    transition: 0.5s;
+}
+
+.btn-colour:hover {
+    color: #505050;
+}
+
+.fundraiser-hr {
+    background-color: #ff8500;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    max-width: 80%;
+}
 
 
 /*--------------------------------- Footer*/
@@ -81,4 +118,8 @@ footer a:hover  {
     .page-width-container {   
         max-width: 80%;
     }
+    .fundraiser-img {
+    max-height: 300px;
+    width: auto;
+   }
 }
