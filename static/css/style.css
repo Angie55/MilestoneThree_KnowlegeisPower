@@ -1,4 +1,18 @@
 
+.margin-top-50px {
+    margin-top: 50px;
+}
+
+.green-button {
+    background-color: #94c83d;
+    color: white;
+    transition: 0.5s;
+}
+
+.green-button:hover {
+    color: #505050;
+}
+
 /*--------------------------------- Main Navigation*/
 .nav {
     border-bottom: 5px solid #ff8500;
@@ -45,15 +59,12 @@ header p {
 
 .read-more-btn {
     margin-top: 20px;
-}
-
-.btn-colour { 
     background-color: #03ADDF;
     color: white;
     transition: 0.5s;
 }
 
-.btn-colour:hover {
+.read-more-btn:hover {
     color: #505050;
 }
 
@@ -63,6 +74,41 @@ header p {
     margin-bottom: 40px;
     max-width: 80%;
 }
+
+
+/*--------------------------------- Fundraiser information page*/
+
+.fund-img-border{
+   color: #03ADDF;
+}
+
+.fund-info-icon{
+    font-size: 80px;
+    color: #03ADDF;
+    padding-right: 20px;
+}
+
+.icon, .icon-info {
+    display: inline-block;
+}
+
+.fund-details {
+    border: 1px solid #03ADDF;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.delete-btn {
+    background-color: #cc3300;
+    color: white;
+}
+
+.btn-space {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
 
 
 /*--------------------------------- Footer*/
