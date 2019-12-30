@@ -63,7 +63,28 @@
                         <a class="btn green-button btn-space" href="" role="button">Add a new fundraiser</a>
                     </div>
                     <div class="col-4">
-                        <a class="btn delete-btn btn-space" href="" role="button">Delete this fundraiser</a>
+                        <a class="btn delete-btn btn-space" role="button" data-toggle="modal" data-target="#exampleModalCenter">Delete this fundraiser</a>
+                    </div>
+                </div>
+                
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalCenterTitle">Are you sure you want to delete this fundraiser?</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                            <strong>Please note:</strong><br>
+                            This fundraiser will be permanently deleted if you click 'Delete' and will have to be added again.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn green-button" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn delete-btn">Delete</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
