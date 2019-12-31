@@ -47,9 +47,7 @@ def insert_fundraiser():
 @app.route('/edit_fundraiser/<fundraiser_id>')
 def edit_fundraiser(fundraiser_id):
     the_fundraiser =  mongo.db.fundraisers.find_one({"_id": ObjectId(fundraiser_id)})
-    the_country = mongo.db.fundraisers.find_one("fundraiser_country")
-    return render_template('edit-fundraiser.html', fundraiser=the_fundraiser,
-                                                   country=the_country)    
+    return render_template('edit-fundraiser.html', fundraiser=the_fundraiser)    
    
                 
     
