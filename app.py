@@ -47,7 +47,22 @@ def insert_fundraiser():
 @app.route('/edit_fundraiser/<fundraiser_id>')
 def edit_fundraiser(fundraiser_id):
     the_fundraiser =  mongo.db.fundraisers.find_one({"_id": ObjectId(fundraiser_id)})
-    return render_template('edit-fundraiser.html', fundraiser=the_fundraiser)    
+    return render_template('edit-fundraiser.html', fundraiser=the_fundraiser) 
+    
+@app.route('/update_fundraiser/<fundraiser_id>', methods=["POST"])
+def update_fundraiser(fundraiser_id):
+    fundraisers = mongo.db.fundraisers
+    fundraisers.update( {'_id': ObjectId(fundraiser_id)},
+    {
+        'fundraiser_name':request.form.get('fundraiser_name'),
+        'fundraiser_target':request.form.get('fundraiser_target'),
+        'fundraiser_country': request.form.get('fundraiser_country'),
+        'fundraiser_image': request.form.get('fundraiser_image'),
+        'fundraiser_website_link':request.form.get('fundraiser_website_link'),
+        'fundraiser_intro':request.form.get('fundraiser_intro'),
+        'fundraiser_details':request.form.get('fundraiser_details')
+    })
+    return redirect(url_for('get_fundraisers'))  
    
                 
     

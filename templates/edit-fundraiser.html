@@ -16,18 +16,18 @@
         <div class="row form-block">
             <div class="col-12 form-content">
     
-                <form action="{{ url_for('insert_fundraiser') }}" method="POST">
+                <form action="{{ url_for('update_fundraiser', fundraiser_id=fundraiser._id) }}" method="POST">
                     <div class="form-group">
                         <label for="name">Fundraiser Name/Title:</label>
                         <input type="text" name="fundraiser_name" class="form-control" value="{{fundraiser.fundraiser_name}}" id="fundraiser_name" required>
                     </div>
                     <div class="form-group">
                         <label for="target">Target amount to raise:</label>
-                        <input type="text" name="fundraiser_target" class="form-control" value="{{fundraiser.fundraiser_target}}" id="fundraiser_target" required>
+                        <input type="number" name="fundraiser_target" class="form-control" value="{{fundraiser.fundraiser_target}}" id="fundraiser_target" required>
                     </div>
                     <div class="form-group">
                     <label for="country">Country of benificeries</label>
-                    <select class="form-control selectpicker countrypicker" name="fundraiser_country" id="fundraiser_country">
+                    <select class="form-control selectpicker countrypicker" name="fundraiser_country" id="fundraiser_country" required>
                        <option value="" disabled selected>Select a country</option>
                        <option value="Afganistan">Afghanistan</option>
                        <option value="Albania">Albania</option>
