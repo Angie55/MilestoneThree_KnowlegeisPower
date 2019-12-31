@@ -15,7 +15,7 @@
         
         <div class="row form-block">
             <div class="col-12 form-content">
-                <h6>Please fill in every section of the form below, all sections must be filled to submit</h6>
+                <h6>Please fill in every section of the form below, all sections are required before the form can be submitted.</h6>
                 <form action="{{ url_for('insert_fundraiser') }}" method="POST">
                     <div class="form-group">
                         <label for="name">Fundraiser Name/Title:</label>
@@ -24,7 +24,7 @@
                     <div class="form-group">
                         <label for="target">Target amount to raise:</label>
                         <input type="number" name="fundraiser_target" class="form-control" id="fundraiser_target" required
-                        placeholder="Please type the amount in pounds sterling">
+                        placeholder="Please type the amount in pounds sterling.">
                     </div>
                     <div class="form-group">
                     <label for="country">Country of benificeries:</label>
@@ -280,25 +280,25 @@
                     </div>
                     <div class="form-group">
                         <label for="fund-image">Fundraiser image:</label>
-                        <input type="text" name="fundraiser_image" class="form-control" id="fundraiser_image" required
-                        placeholder="Please paste a link to an image for the fundraiser">
+                        <input type="text" name="fundraiser_image" class="form-control" id="fundraiser_image"  required
+                        placeholder="Please paste a link to an image for the fundraiser.">
                     </div>
                     <div class="form-group">
                         <label for="donation-link">Fundraiser donation page:</label>
                         <input type="text" name="fundraiser_website_link" class="form-control" id="fundraiser_website_link" required
-                        placeholder="Please paste a link that goes to the donation page for this fundraiser">
+                        placeholder="Please paste a link that goes to the donation page for this fundraiser.">
                     </div>
                 
                     <div class="form-group">
-                        <label for="fundraiser-intro">Fundraiser introduction:</label>
-                        <textarea class="form-control" name="fundraiser_intro" id="fundraiser_intro" rows="12" required>
-                        </textarea> 
+                        <label for="fundraiser-intro">Fundraiser introduction (240-450 characters):</label>
+                        <textarea class="form-control" name="fundraiser_intro" id="fundraiser_intro" rows="12" minlength="240" maxlength="450"required
+                        placeholder="Write a few sentances between 240-450 characters here to give a brief overview of the fundraiser."></textarea> 
                     </div>
                     
                      <div class="form-group">
-                        <label for="fundraiser-details">Fundraiser details:</label>
-                        <textarea class="form-control" name="fundraiser_details" id="fundraiser_details" rows="12" required>
-                        </textarea> 
+                        <label for="fundraiser-details">Fundraiser details (min of 450 characters):</label>
+                        <textarea class="form-control" name="fundraiser_details" id="fundraiser_details" rows="12" minlength="240" required 
+                        placeholder="Write the full decription here or copy and past the information from the fundraiser page. Please use a minimum of 450 characters."></textarea> 
                     </div>
                       
                     <button type="submit" class="btn form-btn green-button">Submit</button>
