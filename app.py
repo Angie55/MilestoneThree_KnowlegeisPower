@@ -43,12 +43,13 @@ def insert_fundraiser():
     return redirect(url_for('get_fundraisers')) 
     
     
-    
+#displays the edit fundraiser page with the form    
 @app.route('/edit_fundraiser/<fundraiser_id>')
 def edit_fundraiser(fundraiser_id):
     the_fundraiser =  mongo.db.fundraisers.find_one({"_id": ObjectId(fundraiser_id)})
     return render_template('edit-fundraiser.html', fundraiser=the_fundraiser) 
-    
+
+#updates the fundraiser with the details that were submitted  
 @app.route('/update_fundraiser/<fundraiser_id>', methods=["POST"])
 def update_fundraiser(fundraiser_id):
     fundraisers = mongo.db.fundraisers
@@ -63,8 +64,13 @@ def update_fundraiser(fundraiser_id):
         'fundraiser_details':request.form.get('fundraiser_details')
     })
     return redirect(url_for('get_fundraisers'))  
-   
-                
+
+
+#deletes the fundraiser   
+@app.route('/delete_fundraiser/<fundraiser_id>')
+def delete_fundraiser(fundraiser_id):
+    mongo.db.fundraisers.remove({'_id': ObjectId(fundraiser_id)})
+    return redirect(url_for('get_fundraisers'))                
     
 
 if __name__ == '__main__':
