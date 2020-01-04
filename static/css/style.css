@@ -22,6 +22,30 @@ h1, h2, h3, h6 {
     color: #505050;
 }
 
+.blue-btn {
+    background-color: #03ADDF;
+    color: white;
+    transition: 0.5s;
+}
+
+.blue-btn:hover {
+    color: #505050;
+}
+
+.headers-position {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.general-hr {
+    background-color: #ff8500;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: 3px;
+    max-width: 50%;
+}
+
+
 /*--------------------------------- Main Navigation*/
 .nav {
     border-bottom: 10px solid #ff8500;
@@ -37,19 +61,7 @@ h1, h2, h3, h6 {
     color: #ff8500;
 }
 
-/*--------------------------------- Header*/
-.header-hr {
-    background-color: #ff8500;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    height: 3px;
-    max-width: 50%;
-}
-
-h1 {
-    text-align: center;
-    margin-top: 30px;
-}
+/*--------------------------------- Headers*/
 
 header p {
     margin-top: 30px;
@@ -59,6 +71,16 @@ header p {
     text-align: center;
 }
 
+/*--------------------------------- Home page*/
+
+.home-text {
+    padding: 30px 10px 30px 30px ;
+}
+
+.get-invloved-headers {
+    margin-bottom: 50px;
+}
+
 /*--------------------------------- Fundraiser page*/
 
 
@@ -66,15 +88,9 @@ header p {
     margin-top: 30px;
 }
 
-.read-more-btn {
-    margin-top: 20px;
-    background-color: #03ADDF;
-    color: white;
-    transition: 0.5s;
-}
 
-.read-more-btn:hover {
-    color: #505050;
+.read-more-btn {
+   margin-top: 20px; 
 }
 
 .fundraiser-hr {
