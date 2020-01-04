@@ -11,6 +11,8 @@
     <!-- Font awesome and Google fonts -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato|Oswald:500&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="static/images/KIP_favicon.png">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/style.css')}}"/>
 </head>
@@ -18,7 +20,9 @@
 
 <body>
     <nav class="navbar navbar-expand-lg nav">
-        <a class="navbar-brand page-headers" href="#">Knowledge is Power</a>
+        <a class="navbar-brand" href="{{ url_for('index') }}">
+          <img src="static/images/KIPLogo.png" alt="">
+        </a>
         
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
