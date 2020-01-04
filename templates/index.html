@@ -36,26 +36,23 @@
     
     <hr class="general-hr">
             
-    <section>
-        <div class="row justify-content-center">
-            <div class="col-6">
+    <section class="welcome-section">
+        <div class="row justify-content-around">
+            <div class="col-lg-5 col-md-10 welcome-border">
                 <h2 class="headers-position">Welcome to Knowledge is Power</h2>
-                <p class="home-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                nisi ut aliquip ex ea commodo consequat.
+                <p class="home-text">Hello and welcome to our collection of fundraisers that focus on education. These fundraisers link to both charity sites and general fundraiser sites
+                with beneficiaries around the world. You can browse what has been added and also add a fundraiser you have seen and would like to raise awareness for. You can also make 
+                updates to existing fundraisers such as how close they are to the target and any new inspiring information. We hope that by having a collection of fundraiser in one place
+                it will encourage more donations across various fundraisers. 
                 </p>
             </div> 
-            <div class="col-6">
-                <h2 class="headers-position">Welcome to Knowledge is Power</h2>
-                <p class="home-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                nisi ut aliquip ex ea commodo consequat.
+            <div class="col-lg-5 col-md-10 welcome-border">
+                <h2 class="headers-position">A better life through education</h2>
+                <p class="home-text">Here at KIP we believe that education really is the key to improving lives around the world. Giving the gift of knowledge can give essential skills 
+                that can empower an individual or community to work and provide for themselves and their families. No one should be denied an education and be forced to struggle or into 
+                an unsafe way of life just to eat and have a roof over their head because they lack even basic skills such as reading, writing and maths. 
                 </p>
-            </div> 
+              </div>  
         </div>
     </section>
     
@@ -65,37 +62,36 @@
         <h2 class="headers-position get-invloved-headers">How to get involved</h2>
         <div class="row justify-content-center">
           
-            <div class="col-6">
+            <div class="col-lg-6 col-md-12">
                 <img class="img-fluid" src="static/images/homepage-images/home-image-girl.jpg" alt="get involved image">
             </div>
-            <div class="col-6">
-               
-                <p class="home-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                nisi ut aliquip ex ea commodo consequat.
+            <div class="col-lg-6 col-md-12">
+                <h3 class="get-involved-headers">View and donate</h3>
+                <p class="home-text">Whether you find one fundraiser you would like to donate a higher amount to or several you would like to make little donation to we hope you will 
+                help us improve education worldwide. You can help us keep the information up to date too by deleting fundraisers that have ended or editing the details if there are any 
+                updates or corrections.
                 </p>
                 <div class="text-center">
                   <a class="btn blue-btn" href="{{ url_for('get_fundraisers') }}" role="button">View fundraisers</a>
                 </div>
             </div> 
-            <div class="col-6"> 
-                <p class="home-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                nisi ut aliquip ex ea commodo consequat.
+        </div> 
+        <hr class="thin-hr get-involved-hr">
+        <div class="row justify-content-center home-add-fund">
+            <div class="col-lg-6 col-md-12 home-add-fund"> 
+                <h3 class="get-involved-headers">Have a fundraiser to add?</h3>
+                <p class="home-text">Do you know of a fundraiser that is being run by a charity or through a fundraiser site that you can add? However big or small or close it is to the 
+                target it is, add it to our collection and help boost it’s visibility!
                 </p>
                 <div class="text-center">
-                  <a class="btn blue-btn" href="{{ url_for('get_fundraisers') }}" role="button">View fundraisers</a>
+                  <a class="btn blue-btn" href="{{ url_for('add_fundraiser') }}" role="button">Add a fundraisers</a>
                 </div>
             </div> 
-            <div class="col-6">
-                <img class="img-fluid" src="static/images/homepage-images/home-image-girl.jpg" alt="get involved image">
+            <div class="col-lg-6 col-md-12">
+                <img class="img-fluid" src="static/images/homepage-images/home-image-boy.jpg" alt="get involved image">
             </div>
-            
-        </div>
+        </div>  
+        
     </section>
      
      

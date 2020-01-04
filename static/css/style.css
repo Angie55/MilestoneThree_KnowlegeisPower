@@ -39,10 +39,16 @@ h1, h2, h3, h6 {
 
 .general-hr {
     background-color: #ff8500;
-    margin-top: 40px;
+    margin-top: 50px;
     margin-bottom: 40px;
-    height: 3px;
+    height: 5px;
     max-width: 50%;
+}
+
+.thin-hr {
+    background-color: #ff8500;
+    max-width: 80%;
+    height: 2px;
 }
 
 
@@ -74,12 +80,37 @@ header p {
 /*--------------------------------- Home page*/
 
 .home-text {
-    padding: 30px 10px 30px 30px ;
+    padding: 30px 10px 10px 30px ;
+}
+
+.welcome-section {
+    margin-top: 50px;
+}
+
+.welcome-border {
+    border: 3px solid #e7e5e1;
 }
 
 .get-invloved-headers {
     margin-bottom: 50px;
 }
+
+.get-involved-headers {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.get-involved-hr {
+   margin-top: 50px;
+   margin-bottom: 50px; 
+}
+
+.home-add-fund {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
 
 /*--------------------------------- Fundraiser page*/
 
@@ -93,11 +124,11 @@ header p {
    margin-top: 20px; 
 }
 
-.fundraiser-hr {
-    background-color: #ff8500;
+
+
+.fundraising-hr {
     margin-top: 40px;
     margin-bottom: 40px;
-    max-width: 80%;
 }
 
 
