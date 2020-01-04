@@ -8,6 +8,7 @@ h1, h2, h3, h6 {
 }
 
 
+
 .margin-top-50px {
     margin-top: 50px;
 }
@@ -51,6 +52,20 @@ h1, h2, h3, h6 {
     height: 2px;
 }
 
+ .back-to-top-link {
+        text-align: center;
+        
+}
+
+.back-to-top-link a {
+    color: #505050;
+    transition: 0.5s;
+}
+
+.back-to-top-link a:hover {
+    color: #ff8500;
+    text-decoration: none;
+}
 
 /*--------------------------------- Main Navigation*/
 .nav {
@@ -228,8 +243,36 @@ footer a:hover  {
     margin-top: 40px;
 }
 
+/*---------------------------------Media Queries mobile and tablet screen*/
 
+@media (max-width:1025px) {
+    .disclaimer {
+        display: none;
+    }
+    
+}
 
+@media (max-width:1200px) {
+    .welcome-sm {
+        margin: 0px 20px 0px 20px;
+    }
+    .better-life-sm {
+        margin: 50px 20px 0px 20px;
+    }
+    .view-donate-sm {
+        margin-top: 50px;
+    }
+    .home-add-fund {
+        margin-top: 0px;
+    }
+   
+}
+
+@media (max-width:720px) {
+    .sm-display-none {
+        display: none
+    }
+}
 
 
 
@@ -239,11 +282,14 @@ footer a:hover  {
 /*---------------------------------Media Queries large screen*/
 
 @media (min-width:1025px) {
-    .page-width-container {   
-        max-width: 80%;
-    }
+    
     .fundraiser-img {
     max-height: 300px;
     width: auto;
    }
+   .page-width-container {   
+        width: 80%;
+    }
+    
 }
+
