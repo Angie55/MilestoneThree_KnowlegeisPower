@@ -82,6 +82,19 @@ h1, h2, h3, h6 {
     color: #ff8500;
 }
 
+.navbar-toggler-icon {
+    color: #505050;
+    margin-top: 10px;
+    font-size: 30px;
+}
+.navbar-toggler {
+    padding: 4px 0px;
+}
+
+.navbar-brand {
+    padding: 0px;
+}
+
 /*--------------------------------- Headers*/
 
 header p {
@@ -231,15 +244,11 @@ footer a:hover  {
     margin-top: 10px;
 }
 
-.footer-nav{
-    margin-top: 20px;
-}
-
 .footer-info {
     margin-top: 15px;
 }
 
-.disclaimer{
+.disclaimer, .footer-nav{
     margin-top: 40px;
 }
 
@@ -249,7 +258,6 @@ footer a:hover  {
     .disclaimer {
         display: none;
     }
-    
 }
 
 @media (max-width:1200px) {
@@ -265,7 +273,6 @@ footer a:hover  {
     .home-add-fund {
         margin-top: 0px;
     }
-   
 }
 
 @media (max-width:720px) {
@@ -274,15 +281,9 @@ footer a:hover  {
     }
 }
 
-
-
-
-
-
 /*---------------------------------Media Queries large screen*/
 
 @media (min-width:1025px) {
-    
     .fundraiser-img {
     max-height: 300px;
     width: auto;
@@ -290,6 +291,10 @@ footer a:hover  {
    .page-width-container {   
         width: 80%;
     }
-    
 }
 
+@media (min-width:1025px) {
+    .back-to-top-link {
+    display: none;    
+    }
+}
