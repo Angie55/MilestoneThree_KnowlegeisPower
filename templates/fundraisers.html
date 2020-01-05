@@ -2,25 +2,22 @@
 
 
 
-<div class="container-fluid page-width-container">
-    <header>
+<div class="container-fluid page-width-container fundraisers-page-sm">
+    <header class="page-headers">
         <h1 class="headers-position">Fundraisers Page</h1>
-        <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-        sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
-        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Take a look at this range of fundraisers and make a donation today. No matter how small, every donation is a wonderful gift to 
+        support those who do not have easy access to education. Click read more to see more of the details and edit it if you see any corrections 
+        or know of any new information. If you know of a fundraiser that is not here please add it by filling in the form.  Please delete any 
+        fundraisers you come that have ended so we can focus on those still working towards their target.
         </p>
-        <div class="text-center">
+        <div class="text-center headers-button">
             <a class="btn green-button" href="{{ url_for('add_fundraiser') }}" role="button">Add a fundraiser</a>
         </div>
     </header> 
     
-    <hr class="general-hr">
+    <hr class="general-hr fund-top-hr">
     
-    <main>
+    <main class="fund-main">
         
         <div class="container-fluid">
         {% for fundraiser in fundraisers %}    
@@ -30,19 +27,27 @@
                 </div>  
                 
                 <div class="col-xl-4 col-lg-6">
-                    <h3 class="text-center">{{fundraiser.fundraiser_name}}</h3>
+                    <h3 class="text-center fund-name-sm">{{fundraiser.fundraiser_name}}</h3>
                     <p class="intro-fund-page">{{fundraiser.fundraiser_intro}}</p>
                     <div class="text-center">
                         <a class="btn blue-btn read-more-btn" href="{{ url_for('fundraiser', fundraisers_id=fundraiser._id) }}" role="button">Read More</a>
                     </div>
                 </div> 
             </div>
-            <hr class="fundraiser-hr">
+            <hr class="thin-hr fundraising-hr">
          {% endfor %}   
+         
+        <div class="row text-center">
+            <div class="col-12 back-to-top-link">
+                <a href="#back-to-top">Back to top</a> 
+            </div>
+        </div> 
+         
          
          
         </div>
         
+     
         
         
     </main>
