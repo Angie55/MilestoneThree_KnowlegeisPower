@@ -165,9 +165,7 @@ h1, h2, h3, h6 {
 
 /*--------------------------------- Fundraiser information page*/
 
-.fund-img-border{
-   color: #03ADDF;
-}
+
 
 .fund-info-icon{
     font-size: 80px;
@@ -177,16 +175,35 @@ h1, h2, h3, h6 {
 
 .icon, .icon-info {
     display: inline-block;
+}  
+
+.target-country{
+   font-size: 1.8em;
+}
+
+.target-country-border {
+    border: 3px solid #03ADDF;
+}
+
+.targ-count-block {
+    padding-top: 10px;
+}
+
+.display-title {
+    color: #03ADDF;
 }
 
 .fund-details {
-    border: 1px solid #03ADDF;
+    border: 3px solid #03ADDF;
     padding: 20px;
     margin-top: 20px;
 }
 
 .delete-btn {
     background-color: #cc3300;
+}
+
+.delete-button-txt {
     color: white;
 }
 
@@ -195,8 +212,22 @@ h1, h2, h3, h6 {
     padding-right: 20px;
 }
 
+.modal-header {
+    background-color: #03ADDF; 
+    color: white;
+}
+
+.close-icon {
+    color: white;
+    font-size: 30px;
+}
+
 /*--------------------------------- Forms*/
  .form-header {
+     margin-top: 30px;
+ }
+ 
+ .form-header p {
      margin-top: 30px;
  }
  
@@ -264,6 +295,7 @@ footer a:hover  {
     .footer-info {
         margin-top: 40px;
     }
+    
 }
 
 @media (max-width:1200px) {
@@ -273,7 +305,7 @@ footer a:hover  {
     .better-life-sm {
         margin: 50px 20px 0px 20px;
     }
-    .view-donate-sm {
+    .view-donate-sm, .country-display-sm {
         margin-top: 50px;
     }
     .home-add-fund {
@@ -286,6 +318,10 @@ footer a:hover  {
        padding-left: 20px;
        padding-right: 20px;
     }
+    .form-block {
+        max-width: 90%;
+        margin: 30px auto;
+    }
 }
 
 @media (max-width:720px) {
@@ -294,6 +330,9 @@ footer a:hover  {
     }
     .fundraisers-page-sm {
         padding: 0px;
+    }
+    .btn-space-sm {
+        margin-top: 30px;
     }
 }
 

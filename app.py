@@ -70,8 +70,12 @@ def update_fundraiser(fundraiser_id):
 @app.route('/delete_fundraiser/<fundraiser_id>')
 def delete_fundraiser(fundraiser_id):
     mongo.db.fundraisers.remove({'_id': ObjectId(fundraiser_id)})
-    return redirect(url_for('get_fundraisers'))                
+    return redirect(url_for('get_fundraisers')) 
     
+@app.route('/contact_us')
+def contact_us():
+    return render_template("contact-us.html")    
+ 
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
