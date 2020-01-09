@@ -16,6 +16,10 @@ mongo = PyMongo(app)
 @app.route('/index')
 def index():
     return render_template("index.html")
+    
+@app.route('/login_register')
+def login_register():
+    return render_template("login-register.html")    
 
 @app.route('/get_fundraisers')
 def get_fundraisers():
