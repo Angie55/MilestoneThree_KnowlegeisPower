@@ -1,14 +1,10 @@
 {% extends 'base.html' %} {% block content %} 
 
-<div class="container-fluid page-width-container">
+<div class="container-fluid page-width-container page-padding-sm">
     
     <header class="form-header">
-        <h1 class="headers-position">Edit a fundraiser</h1>
-        
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </p>
+        <h1 class="headers-position">Edit this fundraiser</h1>
+        <p class="text-center"> Help us keep this fundraiser up-to-date by amending or adding to the details below.</p>
     </header>
     
     <main>
@@ -26,9 +22,9 @@
                         <input type="number" name="fundraiser_target" class="form-control" value="{{fundraiser.fundraiser_target}}" id="fundraiser_target" required>
                     </div>
                     <div class="form-group">
-                    <label for="country">Country of benificeries</label>
+                    <label for="country">Country of benificeries:</label>
                     <select class="form-control selectpicker countrypicker" name="fundraiser_country" id="fundraiser_country" required>
-                       <option value="" disabled selected>Select a country</option>
+                       <option value="{{fundraiser.fundraiser_country}}">{{fundraiser.fundraiser_country}}</option>
                        <option value="Afganistan">Afghanistan</option>
                        <option value="Albania">Albania</option>
                        <option value="Algeria">Algeria</option>
@@ -278,7 +274,7 @@
                     </select>
                     </div>
                     <div class="form-group">
-                        <label for="fund-image">Fundraiser image:</label>
+                        <label for="fund-image">Fundraiser image URL:</label>
                         <input type="text" name="fundraiser_image" class="form-control" value="{{fundraiser.fundraiser_image}}" id="fundraiser_image" required>
                     </div>
                     <div class="form-group">
@@ -287,13 +283,17 @@
                     </div>
                 
                     <div class="form-group">
-                        <label for="fundraiser-intro">Fundraiser introduction</label>
-                        <input type="text" name="fundraiser_intro" class="form-control" value="{{fundraiser.fundraiser_intro}}" id="fundraiser_intro" required> 
+                        
+                        <label for="fundraiser-intro">Fundraiser introduction:</label><br>
+                        <small  class="text-muted">Must be 240-450 characters long</small>
+                        <textarea class="form-control" name="fundraiser_intro" id="fundraiser_intro" rows="5" minlength="240" maxlength="450" required>{{fundraiser.fundraiser_intro}}</textarea> 
                     </div>
                     
                      <div class="form-group">
-                        <label for="fundraiser-details">Fundraiser details</label>
-                        <input type="text" name="fundraiser_details" class="form-control" value="{{fundraiser.fundraiser_details}}" id="fundraiser_details" rows="12"></textarea> 
+                        <label for="fundraiser-details">Fundraiser details:</label><br>
+                        <small class="text-muted">Must be a min of 240 characters long</small>
+                        <textarea class="form-control" name="fundraiser_details" id="fundraiser_details" rows="12" minlength="240" required>{{fundraiser.fundraiser_details}}</textarea>
+                        
                     </div>
                       
                     <button type="submit" class="btn form-btn green-button">Submit</button>

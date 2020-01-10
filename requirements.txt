@@ -1,4 +1,4 @@
-astroid==1.6.6
+installastroid==1.6.6
 awscli==1.16.286
 botocore==1.13.22
 colorama==0.4.1

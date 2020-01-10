@@ -295,9 +295,13 @@ h1, h2, h3, h6 {
      margin: 10px auto;
  }
  
-  .form-content h6{
+  .form-content-h6{
       margin-bottom: 40px;
   }
+  
+ .form-control {
+    border: 1px solid #ff8500;
+ }
  
  .form-btn {
      margin-top: 20px;
@@ -375,13 +379,17 @@ footer a:hover  {
         max-width: 90%;
         margin: 30px auto;
     }
+    .form-content {
+        padding: 40px 0px;
+        max-width: 90%;
+    }
 }
 
 @media (max-width:720px) {
     .sm-display-none {
         display: none
     }
-    .fundraisers-page-sm {
+    .page-padding-sm {
         padding: 0px;
     }
     .btn-space-sm {

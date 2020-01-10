@@ -1,6 +1,7 @@
 import os
-from flask import Flask, render_template, redirect, request, url_for
+from flask import Flask, render_template, redirect, request, url_for, flash, session
 from flask_pymongo import PyMongo
+
 from bson.objectid import ObjectId
 
 app = Flask(__name__)
@@ -12,14 +13,20 @@ app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
 mongo = PyMongo(app)
 
 
+
 @app.route('/')
 @app.route('/index')
 def index():
     return render_template("index.html")
     
+    
+#login/register      
 @app.route('/login_register')
 def login_register():
-    return render_template("login-register.html")    
+    return render_template("login-register.html")   
+    
+    
+    
 
 @app.route('/get_fundraisers')
 def get_fundraisers():
