@@ -1,8 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
-
-
 <div class="container-fluid page-width-container page-padding-sm">
+    <!--Header and introduction to fundraiser page-->
     <header class="page-headers">
         <h1 class="headers-position">Fundraisers Page</h1>
         <p>Take a look at this range of fundraisers and make a donation today. No matter how small, every donation is a wonderful gift to 
@@ -10,6 +9,7 @@
         or know of any new information. If you know of a fundraiser that is not here please add it by filling in the form.  Please delete any 
         fundraisers you come that have ended so we can focus on those still working towards their target.
         </p>
+        <!--Link to add a new findraiser form-->
         <div class="text-center headers-button">
             <a class="btn green-button" href="{{ url_for('add_fundraiser') }}" role="button">Add a fundraiser</a>
         </div>
@@ -18,14 +18,15 @@
     <hr class="general-hr fund-top-hr">
     
     <main class="fund-main">
-        
         <div class="container-fluid">
-        {% for fundraiser in fundraisers %}    
+        <!--This section displays all the fundraisers that have been added by looping through the fundraisers in the MongoDB collection Fundraisers-->   
+        {% for fundraiser in fundraisers %}  
+            <!--Displays fundraiser image-->
             <div class="row justify-content-center">
                 <div class="col-xl-4 col-lg-6">
                     <img class="img-fluid" src="{{fundraiser.fundraiser_image}}"> 
                 </div>  
-                
+                <!--Displays fundraiser name and introduction-->
                 <div class="col-xl-4 col-lg-6">
                     <h3 class="text-center fund-name-sm">{{fundraiser.fundraiser_name}}</h3>
                     <p class="intro-fund-page">{{fundraiser.fundraiser_intro}}</p>
@@ -35,23 +36,15 @@
                 </div> 
             </div>
             <hr class="thin-hr fundraising-hr">
-         {% endfor %}   
-         
-        <div class="row text-center">
-            <div class="col-12 back-to-top-link">
-                <a href="#back-to-top">Back to top</a> 
-            </div>
-        </div> 
-         
-         
-         
+        {% endfor %}   
+            <!--Link back to top of the page--> 
+            <div class="row text-center">
+                <div class="col-12 back-to-top-link">
+                    <a href="#back-to-top">Back to top</a> 
+                </div>
+            </div> 
         </div>
-        
-     
-        
-        
     </main>
-
 </div>
 
 {% endblock %}
