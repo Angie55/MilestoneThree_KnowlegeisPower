@@ -1,31 +1,31 @@
 {% extends 'base.html' %} {% block content %} 
 
-<div class="container-fluid page-width-container">
-    
+<div class="container-fluid page-width-container page-padding-sm">
+    <!--Form title and introduction-->
     <header class="form-header">
         <h1 class="headers-position">Add fundraiser</h1>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        <p class="text-center">Fill in the details of the fundraiser below to add it to our list of fundriasers.
         </p>
     </header>
-    
+    <!--Form for user to add a fundraiser-->
     <main>
-        
         <div class="row form-block">
             <div class="col-12 form-content">
-                <h6>Please fill in every section of the form below, all sections are required before the form can be submitted.</h6>
+                <h6 class="form-content-h6">Please fill in every section of the form below, all sections are required before the form can be submitted.</h6>
+                
                 <form action="{{ url_for('insert_fundraiser') }}" method="POST">
+                    <!--Fundraiser name/title-->
                     <div class="form-group">
                         <label for="name">Fundraiser Name/Title:</label>
                         <input type="text" name="fundraiser_name" class="form-control" id="fundraiser_name" required>
                     </div>
+                    <!--Fundraiser target-->
                     <div class="form-group">
                         <label for="target">Target amount to raise:</label>
                         <input type="number" name="fundraiser_target" class="form-control" id="fundraiser_target" required
                         placeholder="Please type the amount in pounds sterling.">
                     </div>
+                    <!--Fundraiser country-->
                     <div class="form-group">
                     <label for="country">Country of benificeries:</label>
                     <select class="form-control selectpicker countrypicker" name="fundraiser_country" id="fundraiser_country">
@@ -278,37 +278,37 @@
                        <option value="Zimbabwe">Zimbabwe</option>
                     </select>
                     </div>
+                    <!--Fundraiser image url-->
                     <div class="form-group">
-                        <label for="fund-image">Fundraiser image:</label>
-                        <input type="text" name="fundraiser_image" class="form-control" id="fundraiser_image"  required
-                        placeholder="Please paste a link to an image for the fundraiser.">
+                        <label for="fund-image">Fundraiser image URL:</label>
+                        <input type="text" name="fundraiser_image" class="form-control" id="fundraiser_image" required
+                        placeholder="Paste URL for fundraiser image">
                     </div>
+                    <!--Fundraiser donation link-->
                     <div class="form-group">
                         <label for="donation-link">Fundraiser donation page:</label>
                         <input type="text" name="fundraiser_website_link" class="form-control" id="fundraiser_website_link" required
-                        placeholder="Please paste a link that goes to the donation page for this fundraiser.">
+                        placeholder="Paste link to donation page">
                     </div>
-                
+                    <!--Fundraiser introduction-->
                     <div class="form-group">
                         <label for="fundraiser-intro">Fundraiser introduction (240-450 characters):</label>
-                        <textarea class="form-control" name="fundraiser_intro" id="fundraiser_intro" rows="12" minlength="240" maxlength="450"required
+                        <textarea class="form-control" name="fundraiser_intro" id="fundraiser_intro" rows="5" minlength="240" maxlength="450"required
                         placeholder="Write a few sentances between 240-450 characters here to give a brief overview of the fundraiser."></textarea> 
                     </div>
-                    
-                     <div class="form-group">
+                    <!--Fundraiser details-->
+                    <div class="form-group">
                         <label for="fundraiser-details">Fundraiser details (min of 450 characters):</label>
                         <textarea class="form-control" name="fundraiser_details" id="fundraiser_details" rows="12" minlength="240" required 
                         placeholder="Write the full decription here or copy and past the information from the fundraiser page. Please use a minimum of 450 characters."></textarea> 
                     </div>
-                      
+                    <!-- Add Fundraiser submit button-->  
                     <button type="submit" class="btn form-btn green-button">Submit</button>
                 </form>
+                
             </div>
         </div>
-    
     </main>
-
 </div>
-
 
 {% endblock %}

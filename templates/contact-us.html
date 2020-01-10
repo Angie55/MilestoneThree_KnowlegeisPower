@@ -1,44 +1,45 @@
 {% extends 'base.html' %} {% block content %} 
 
-<div class="container-fluid page-width-container">
+<div class="container-fluid page-width-container page-padding-sm">
     
     <header class="form-header">
+        <!--Form title and introduction-->
         <h1 class="headers-position">Contact us</h1>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
         </p>
     </header>
-    
+    <!--Form for user to make contact-->
     <main>
-        
         <div class="row form-block">
             <div class="col-12 form-content">
+                
                 <form>
                     <div class="row form-group">
+                        <!--Users name-->
                         <div class="col-md-12 col-lg-6">
                             <label for="name">Name:</label>   
                             <input type="text" class="form-control" placeholder="Name" required>
                         </div>
+                        <!--Users email-->
                         <div class="col-md-12 col-lg-6">
                             <label for="email">Email:</label>
                             <input type="email" class="form-control" placeholder="name@example.com" required>
                         </div>    
                     </div>
+                    <!--Users massage-->
                     <div class="form-group">
                         <label for="message">Message:</label>
                         <textarea class="form-control" rows="12" required></textarea>
-                     </div>
-                    
+                    </div>
+                    <!--Submit contact form button-->
                     <button type="submit" class="btn form-btn green-button">Submit</button>
                 </form>
+                
             </div>
         </div>
-    
     </main>
-
 </div>
-
 
 {% endblock %}
