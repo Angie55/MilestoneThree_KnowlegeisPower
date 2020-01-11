@@ -25,10 +25,15 @@ def index():
 def contact_us():
     return render_template("contact-us.html")    
     
-# route to login/register      
-@app.route('/login_register')
-def login_register():
-    return render_template("login-register.html")
+# route to login page      
+@app.route('/login')
+def login():
+    return render_template("login.html")
+    
+# route to login page      
+@app.route('/register')
+def register():
+    return render_template("register.html")    
     
 # Read
 
