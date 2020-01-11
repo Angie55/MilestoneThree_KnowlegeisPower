@@ -207,6 +207,10 @@ h1, h2, h3, h6 {
     color: white;
 }
 
+.close-btn {
+    margin-right: 60px;
+}
+
 .btn-space {
     padding-left: 20px;
     padding-right: 20px;
