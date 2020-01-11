@@ -1,4 +1,4 @@
-
+/*--------------------------------- General styling*/
 body {
     font-family: 'Lato', sans-serif;
 }
@@ -7,33 +7,9 @@ h1, h2, h3, h6 {
     font-family: 'Oswald', sans-serif;
 }
 
-
-
 .margin-top-50px {
     margin-top: 50px;
 }
-
-.green-button {
-    background-color: #94c83d;
-    color: white;
-    transition: 0.5s;
-}
-
-.green-button:hover {
-    color: #505050;
-}
-
-.blue-btn {
-    background-color: #03ADDF;
-    color: white;
-    transition: 0.5s;
-}
-
-.blue-btn:hover {
-    color: #505050;
-}
-
-
 
 .headers-position {
     text-align: center;
@@ -54,8 +30,6 @@ h1, h2, h3, h6 {
     height: 2px;
 }
 
-
-
 .back-to-top-link a {
     color: #505050;
     transition: 0.5s;
@@ -65,6 +39,28 @@ h1, h2, h3, h6 {
     color: #ff8500;
     text-decoration: none;
 }
+
+/*--------------------------------- General button styling*/
+.green-button {
+    background-color: #94c83d;
+    color: white;
+    transition: 0.5s;
+}
+
+.green-button:hover {
+    color: #505050;
+}
+
+.blue-btn {
+    background-color: #03ADDF;
+    color: white;
+    transition: 0.5s;
+}
+
+.blue-btn:hover {
+    color: #505050;
+}
+
 
 /*--------------------------------- Main Navigation*/
 .nav {
@@ -95,7 +91,6 @@ h1, h2, h3, h6 {
 }
 
 /*--------------------------------- Headers*/
-
 .page-headers p {
     margin-top: 30px;
 }
@@ -104,9 +99,7 @@ h1, h2, h3, h6 {
     margin-top: 40px;
 }
 
-
 /*--------------------------------- Home page*/
-
 .home-text {
     padding: 30px 10px 10px 30px ;
 }
@@ -138,15 +131,10 @@ h1, h2, h3, h6 {
     margin-bottom: 50px;
 }
 
-
-
 /*--------------------------------- Fundraiser page*/
-
-
 .intro-fund-page {
     margin-top: 30px;
 }
-
 
 .read-more-btn {
    margin-top: 20px; 
@@ -162,11 +150,7 @@ h1, h2, h3, h6 {
     margin-bottom: 10px;
 }
 
-
 /*--------------------------------- Fundraiser information page*/
-
-
-
 .fund-info-icon{
     font-size: 80px;
     color: #03ADDF;
@@ -245,11 +229,9 @@ h1, h2, h3, h6 {
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;
-  
- 
 }
 
-/* Style the buttons that are used to open the tab content */
+/*------ style the buttons that are used to open the tab content */
 .tab button {
   background-color: inherit;
   float: left;
@@ -264,8 +246,6 @@ h1, h2, h3, h6 {
 .tab button:hover {
   background-color: #ddd;
 }
-
-
 
 /* Style the tab content */
 .tabcontent {
@@ -356,7 +336,6 @@ footer a:hover  {
     .footer-info {
         margin-top: 40px;
     }
-    
 }
 
 @media (max-width:1200px) {
