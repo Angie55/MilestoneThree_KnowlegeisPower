@@ -10,16 +10,18 @@ app = Flask(__name__)
 # connecting app to MongoDB using a environment variable
 app.config["MONGO_DBNAME"] = 'knowledge_is_power'
 app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
+
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 
 # creating an instance of PyMongo
 mongo = PyMongo(app)
 
 
-# displays to home page
+# displays home page
 @app.route('/')
 @app.route('/index')
 def index():
+    
     return render_template("index.html")
     
 # displays to home page  
@@ -33,11 +35,11 @@ def login():
     """Function for handling the logging in of users"""
     if 'logged_in' in session:  # Check is already logged in
         return redirect(url_for('index'))
-
+        
     if request.method == 'POST':
         user = mongo.db.users
         logged_in_user = user.find_one({
-                                'username': request.form['username'].title()})
+                                'name': request.form['username'].title()})
 
         if logged_in_user:
             if check_password_hash(logged_in_user['pass'],
@@ -46,8 +48,9 @@ def login():
                 session['logged_in'] = True
                 return redirect(url_for('index'))
             flash('Sorry incorrect password!')
-            return redirect(url_for('user_login'))
+            return redirect(url_for('login'))
     return render_template('login.html')  
+    
     
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -68,7 +71,7 @@ def register():
             session['logged_in'] = True
             return redirect(url_for('index'))
 
-        flash('Sorry, username already taken. Please try another.')
+        flash('Sorry, username already taken. Please try another. If you have an account please login')
         return redirect(url_for('register'))
     return render_template('register.html')
     
@@ -107,6 +110,7 @@ def add_fundraiser():
 def insert_fundraiser():
     fundraisers = mongo.db.fundraisers
     fundraisers.insert_one(request.form.to_dict())
+    flash('The fundraiser has been added')
     return redirect(url_for('get_fundraisers')) 
     
 # Update   
@@ -115,6 +119,7 @@ def insert_fundraiser():
 @app.route('/edit_fundraiser/<fundraiser_id>')
 def edit_fundraiser(fundraiser_id):
     the_fundraiser =  mongo.db.fundraisers.find_one({"_id": ObjectId(fundraiser_id)})
+    flash('The fundraiser has been updated')
     return render_template('edit-fundraiser.html', fundraiser=the_fundraiser) 
 
 # updates the fundraiser with the details that were submitted  
@@ -140,6 +145,7 @@ def update_fundraiser(fundraiser_id):
 @app.route('/delete_fundraiser/<fundraiser_id>')
 def delete_fundraiser(fundraiser_id):
     mongo.db.fundraisers.remove({'_id': ObjectId(fundraiser_id)})
+    flash('The fundraiser has been deleted')
     return redirect(url_for('get_fundraisers')) 
     
     

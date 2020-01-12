@@ -151,6 +151,17 @@ h1, h2, h3, h6 {
 }
 
 /*--------------------------------- Fundraiser information page*/
+.alert-close {
+    color: #505050;
+    font-size: 30px;
+}
+
+.alert-txt {
+    background-color: #dcefbc;
+    color: #505050;
+    border: 5px solid #94c83d;
+}
+
 .fund-info-icon{
     font-size: 80px;
     color: #03ADDF;
