@@ -2,6 +2,7 @@ import os
 from flask import Flask, render_template, redirect, request, url_for, flash, session
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from werkzeug.security import generate_password_hash, check_password_hash
 
 # creating instance of flask
 app = Flask(__name__)
@@ -9,6 +10,7 @@ app = Flask(__name__)
 # connecting app to MongoDB using a environment variable
 app.config["MONGO_DBNAME"] = 'knowledge_is_power'
 app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
+app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 
 # creating an instance of PyMongo
 mongo = PyMongo(app)
@@ -26,14 +28,56 @@ def contact_us():
     return render_template("contact-us.html")    
     
 # route to login page      
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
-    return render_template("login.html")
+    """Function for handling the logging in of users"""
+    if 'logged_in' in session:  # Check is already logged in
+        return redirect(url_for('index'))
+
+    if request.method == 'POST':
+        user = mongo.db.users
+        logged_in_user = user.find_one({
+                                'username': request.form['username'].title()})
+
+        if logged_in_user:
+            if check_password_hash(logged_in_user['pass'],
+                                   request.form['password']):
+                session['username'] = request.form['username']
+                session['logged_in'] = True
+                return redirect(url_for('index'))
+            flash('Sorry incorrect password!')
+            return redirect(url_for('user_login'))
+    return render_template('login.html')  
     
-# route to login page      
-@app.route('/register')
+@app.route('/register', methods=['GET', 'POST'])
 def register():
-    return render_template("register.html")    
+    """Function for handling the registration of users"""
+    if 'logged_in' in session:  # Check is user already logged in
+        return redirect(url_for('index'))
+
+    if request.method == 'POST':
+
+        user = mongo.db.users
+        dup_user = user.find_one({'username': request.form['username'].title()})
+
+        if dup_user is None:
+            hash_pass = generate_password_hash('password')
+            user.insert_one({'username': request.form['username'].title(),
+                             'password': hash_pass})
+            session['username'] = request.form['username']
+            session['logged_in'] = True
+            return redirect(url_for('index'))
+
+        flash('Sorry, username already taken. Please try another.')
+        return redirect(url_for('register'))
+    return render_template('register.html')
+    
+@app.route('/logout')
+def logout():
+    """Logs the user out and redirects to home"""
+    session.clear()  # Kill session
+    return redirect(url_for('login'))    
+    
     
 # Read
 

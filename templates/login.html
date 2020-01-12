@@ -46,14 +46,17 @@
             <div class="">
                 <h2 class="headers-position">Login</h2>
                 <p class="text-center">Enter your login details</p>
-                <form class="log-reg-content">
+                <form class="log-reg-content" action="" method="POST">
+                    {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+                    <p class="flashMessage">{{ message }}</p>
+                    {% endfor %} {% endif %} {% endwith %}
                     <div class="form-group">
-                        <label for="name">Username:</label>   
-                        <input type="text" class="form-control" placeholder="Name" required>
+                        <label for="username">Username:</label>   
+                        <input type="text"  name="username" class="form-control" placeholder="Username" required>
                     </div>
                     <div class="form-group">
-                        <label for="inputPassword2">Password:</label>
-                        <input type="password" class="form-control" id="log-password" placeholder="Password" required>
+                        <label for="password">Password:</label>
+                        <input type="password" name="pass" class="form-control" id="log-password" placeholder="Password" required>
                     </div>
                     
                     <button type="submit" class="btn form-btn green-button">Login</button>
@@ -63,7 +66,7 @@
         </div>
     </main>
 
-<footer class="container-fluid">
+    <footer class="container-fluid">
         <div class="row">
             <div class="col-4 footer-nav">
                 <a href="{{ url_for('contact_us') }}">Contact us</a>
