@@ -1,6 +1,7 @@
 import os
+import math
 from flask import Flask, render_template, redirect, request, url_for, flash, session
-from flask_pymongo import PyMongo
+from flask_pymongo import PyMongo, pymongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -21,7 +22,6 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/index')
 def index():
-    
     return render_template("index.html")
     
 # displays to home page  
@@ -84,11 +84,29 @@ def logout():
     
 # Read
 
-# displays to fundraisers page where data from database can de displayed   
+# displays fundraisers from the database on the fundraisers page  
 @app.route('/get_fundraisers')
 def get_fundraisers():
+    
+    """
+    The code below displays a limited number of fundraisers on a page
+    with pagination. The num of fundraisers is counted and a limit per
+    page set with a number added each time the page limit is exceeded
+    view that page would be added.
+    It also sorts the fundraisers by ID in decending order so the newset
+    one added is at the top of page 1.
+    """
+    page_limit = 4  # Logic for pagination
+    current_page = int(request.args.get('current_page', 1))
+    total = mongo.db.fundraisers.count()
+    pages = range(1, int(math.ceil(total / page_limit)) + 1)
+    fundraiser = mongo.db.fundraisers.find().sort('_id', pymongo.DESCENDING).skip(
+        (current_page - 1)*page_limit).limit(page_limit)
+        
     return render_template("fundraisers.html",
-                            fundraisers=mongo.db.fundraisers.find())
+                            fundraisers=fundraiser,
+                            current_page=current_page,
+                            pages=pages)
     
 # display of individual fundraiser using id   
 @app.route('/get_fundraisers/<fundraisers_id>')

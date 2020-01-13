@@ -48,7 +48,18 @@
                 </div> 
             </div>
             <hr class="thin-hr fundraising-hr">
-        {% endfor %}   
+        {% endfor %} 
+       
+            <div class="pagin-space">
+                <ul class="pagination justify-content-center ">
+                    {% for page_number in pages %} {% if page_number == current_page %}
+                    <li class="page-item active" aria-current="page"><a class="page-link">{{ page_number }}</a></li>
+                    {% else %}
+                    <li class="page-item" aria-current="page" ><a class="page-link" href="{{ url_for('get_fundraisers', current_page=page_number) }}">{{ page_number }}</a></li>
+                    {% endif %} {% endfor %}
+                </ul>
+            </div>
+        
             <!--Link back to top of the page--> 
             <div class="row text-center">
                 <div class="col-12 back-to-top-link">

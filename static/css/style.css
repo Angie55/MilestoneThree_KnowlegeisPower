@@ -150,6 +150,23 @@ h1, h2, h3, h6 {
     margin-bottom: 10px;
 }
 
+.page-link {
+    color: #505050;
+}
+
+.page-link:hover {
+    background-color: #cac9c9;
+}
+
+.page-item.active .page-link{
+    background-color: #ff8500;
+    border-color: #505050;
+}
+
+.pagin-space {
+    margin-bottom: 50px;
+}
+
 /*--------------------------------- Fundraiser information page*/
 .alert-close {
     color: #505050;
