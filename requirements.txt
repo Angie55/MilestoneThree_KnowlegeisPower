@@ -1,14 +1,11 @@
 astroid==1.6.6
 awscli==1.16.286
-bcrypt==3.1.7
 botocore==1.13.22
-cffi==1.13.2
 colorama==0.4.1
 Django==2.0.2
 dnspython==1.16.0
 docutils==0.15.2
 Flask==1.1.1
-Flask-Bcrypt==0.7.1
 Flask-PyMongo==2.3.0
 ikp3db==1.4.1
 isort==4.3.21
@@ -21,7 +18,6 @@ mccabe==0.6.1
 parso==0.1.1
 pbr==5.4.3
 pyasn1==0.4.8
-pycparser==2.19
 pylint==1.8.1
 pylint-django==0.8.0
 pylint-flask==0.5

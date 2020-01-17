@@ -19,18 +19,10 @@ mongo = PyMongo(app)
 
 
 # displays home page
+
+# route to login page 
 @app.route('/')
-@app.route('/index')
-def index():
-    return render_template("index.html")
-    
-# displays to home page  
-@app.route('/contact_us')
-def contact_us():
-    return render_template("contact-us.html")    
-    
-# route to login page      
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/login', methods=['POST', 'GET'])
 def login():
     """Function for handling the logging in of users"""
     if 'logged_in' in session:  # Check is already logged in
@@ -39,18 +31,17 @@ def login():
     if request.method == 'POST':
         user = mongo.db.users
         logged_in_user = user.find_one({
-                                'name': request.form['username'].title()})
+                                'username': request.form['username'].title()})
 
         if logged_in_user:
-            if check_password_hash(logged_in_user['pass'],
+            if check_password_hash(logged_in_user['password'],
                                    request.form['password']):
                 session['username'] = request.form['username']
                 session['logged_in'] = True
                 return redirect(url_for('index'))
             flash('Sorry incorrect password!')
             return redirect(url_for('login'))
-    return render_template('login.html')  
-    
+    return render_template('login.html')    
     
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -75,11 +66,24 @@ def register():
         return redirect(url_for('register'))
     return render_template('register.html')
     
+  
 @app.route('/logout')
 def logout():
     """Logs the user out and redirects to home"""
     session.clear()  # Kill session
     return redirect(url_for('login'))    
+
+
+@app.route('/index')
+def index():
+    return render_template("index.html")
+    
+# displays to home page  
+@app.route('/contact_us')
+def contact_us():
+    return render_template("contact-us.html")    
+    
+
     
     
 # Read
@@ -90,9 +94,7 @@ def get_fundraisers():
     
     """
     The code below displays a limited number of fundraisers on a page
-    with pagination. The num of fundraisers is counted and a limit per
-    page set with a number added each time the page limit is exceeded
-    view that page would be added.
+    with pagination. 
     It also sorts the fundraisers by ID in decending order so the newset
     one added is at the top of page 1.
     """

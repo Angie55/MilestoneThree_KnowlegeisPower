@@ -46,7 +46,7 @@
             <div class="">
                 <h2 class="headers-position">Login</h2>
                 <p class="text-center">Enter your login details</p>
-                <form class="log-reg-content" action="" method="POST">
+                <form class="log-reg-content" action="{{ url_for('login')}}" method="POST">
                     {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
                     <p class="flashMessage">{{ message }}</p>
                     {% endfor %} {% endif %} {% endwith %}
@@ -56,7 +56,7 @@
                     </div>
                     <div class="form-group">
                         <label for="password">Password:</label>
-                        <input type="password" name="pass" class="form-control" id="log-password" placeholder="Password" required>
+                        <input type="password" name="password" class="form-control" id="log-password" placeholder="Password" required>
                     </div>
                     
                     <button type="submit" class="btn form-btn green-button">Login</button>
