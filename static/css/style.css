@@ -1,7 +1,7 @@
 /*--------------------------------- General styling*/
 body {
     font-family: 'Lato', sans-serif;
-    min-height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -336,6 +336,18 @@ footer a:hover  {
 
 /*---------------------------------Media Queries mobile and tablet screen*/
 
+@media (max-width:720px) {
+    .sm-display-none {
+        display: none
+    }
+    .page-padding-sm {
+        padding: 0px;
+    }
+    .btn-space-sm {
+        margin-top: 30px;
+    }
+}
+
 @media (max-width:1025px) {
     .disclaimer, .footer-info p {
         display: none;
@@ -375,17 +387,12 @@ footer a:hover  {
     }
 }
 
-@media (max-width:720px) {
-    .sm-display-none {
-        display: none
-    }
-    .page-padding-sm {
-        padding: 0px;
-    }
-    .btn-space-sm {
-        margin-top: 30px;
+@media (max-width:1700px) {
+    .log-reg-form {
+        max-width: 80%;
     }
 }
+
 
 /*---------------------------------Media Queries large screen*/
 
