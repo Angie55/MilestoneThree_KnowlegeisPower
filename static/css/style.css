@@ -131,7 +131,7 @@ h1, h2, h3, h6 {
     margin-bottom: 50px;
 }
 
-/*--------------------------------- Fundraiser page*/
+/*--------------------------------- Fundraisers and  search results page*/
 .intro-fund-page {
     margin-top: 30px;
 }
@@ -149,6 +149,8 @@ h1, h2, h3, h6 {
     margin-top: 50px;
     margin-bottom: 10px;
 }
+
+/*--------------------------------- Fundraisers page*/
 
 .page-link {
     color: #505050;
@@ -254,7 +256,7 @@ h1, h2, h3, h6 {
  }
  
  
- /*--------------------------------- register and login page*/
+ /*--------------------------------- register and login pages*/
   
   .log-reg-form {
       max-width: 30%;

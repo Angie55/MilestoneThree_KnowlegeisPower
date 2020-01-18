@@ -1,6 +1,48 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1>Search</h1>
+<div class="container-fluid page-width-container page-padding-sm">
+    <header class="page-headers">
+        <h1 class="headers-position">Search results</h1>
+        <p>If you didn't find the fundriaser you were looking for and know of one, please add it and help us spread the word!<br>
+        head back to the fundraisers page to view the fundraisers we have.</p>
+        <!--Link to add a new findraiser form-->
+        <div class="text-center headers-button">
+            <a class="btn green-button" href="{{ url_for('add_fundraiser') }}" role="button">Add a fundraiser</a>
+        </div>
+    </header> 
+    
+    <hr class="general-hr fund-top-hr">
+    
+    <main class="fund-main">
+        <div class="container-fluid">
+        <!--This section displays all the fundraisers that have the value of the search input in the title or country-->   
+        {% for fundraiser in fundraisers %}  
+            <!--Displays fundraiser image-->
+            <div class="row justify-content-center">
+                <div class="col-xl-4 col-lg-6">
+                    <img class="img-fluid" src="{{fundraiser.fundraiser_image}}"> 
+                </div>  
+                <!--Displays fundraiser name and introduction-->
+                <div class="col-xl-4 col-lg-6">
+                    <h3 class="text-center fund-name-sm">{{fundraiser.fundraiser_name}}</h3>
+                    <p class="intro-fund-page">{{fundraiser.fundraiser_intro}}</p>
+                    <div class="text-center">
+                        <a class="btn blue-btn read-more-btn" href="{{ url_for('fundraiser', fundraisers_id=fundraiser._id) }}" role="button">Read More</a>
+                    </div>
+                </div> 
+            </div>
+            <hr class="thin-hr fundraising-hr">
+        {% endfor %} 
+       
+            <!--Link back to top of the page--> 
+            <div class="row text-center">
+                <div class="col-12 back-to-top-link">
+                    <a href="#back-to-top">Back to top</a> 
+                </div>
+            </div> 
+        </div>
+    </main>
+</div>
 
 
 
