@@ -130,7 +130,7 @@ def add_fundraiser():
 def insert_fundraiser():
     fundraisers = mongo.db.fundraisers
     fundraisers.insert_one(request.form.to_dict())
-    flash('The fundraiser has been added')
+    flash('Success! The fundraiser has been added')
     return redirect(url_for('get_fundraisers')) 
     
 # Update   
@@ -139,7 +139,7 @@ def insert_fundraiser():
 @app.route('/edit_fundraiser/<fundraiser_id>')
 def edit_fundraiser(fundraiser_id):
     the_fundraiser =  mongo.db.fundraisers.find_one({"_id": ObjectId(fundraiser_id)})
-    flash('The fundraiser has been updated')
+    flash('Success! The fundraiser has been updated')
     return render_template('edit-fundraiser.html', fundraiser=the_fundraiser) 
 
 # updates the fundraiser with the details that were submitted  
@@ -165,7 +165,7 @@ def update_fundraiser(fundraiser_id):
 @app.route('/delete_fundraiser/<fundraiser_id>')
 def delete_fundraiser(fundraiser_id):
     mongo.db.fundraisers.remove({'_id': ObjectId(fundraiser_id)})
-    flash('The fundraiser has been deleted')
+    flash('Success! The fundraiser has been deleted')
     return redirect(url_for('get_fundraisers')) 
     
 # Search    
@@ -201,7 +201,7 @@ def search():
         # If no results display then flash this message showing their input     
         elif results_count == 0:
             
-            flash(f'No matching results found for "{search_input}". Please try a different search, browse through our fundraisers below and add a fundraiser')
+            flash(f'No matching results found for "{search_input}". Please try a different search or browse through our fundraisers below')
             
             return redirect('/get_fundraisers')
             
