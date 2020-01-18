@@ -73,12 +73,12 @@ def logout():
     session.clear()  # Kill session
     return redirect(url_for('login'))    
 
-
+# displays  home page
 @app.route('/index')
 def index():
     return render_template("index.html")
     
-# displays to home page  
+  
 @app.route('/contact_us')
 def contact_us():
     return render_template("contact-us.html")    
@@ -168,13 +168,56 @@ def delete_fundraiser(fundraiser_id):
     flash('The fundraiser has been deleted')
     return redirect(url_for('get_fundraisers')) 
     
+# Search    
     
- 
+# searches fundraisers and displays any that have the input value in the title or country    
+@app.route('/search', methods=['GET', 'POST'])
+def search():
+    # gets the value of the search input from the fundraisers page
+    search_input = request.form.get("search_input")
+    search_string = str(search_input)
+    
+    # narrows down search to just use name and counrty in search for input in fundraisers
+    mongo.db.fundraisers.create_index([('fundraiser_name', 'text'), 
+    ('fundraiser_country', 'text')])
+    
+    # Searches results and sorts by id
+    search_results = mongo.db.fundraisers.find(
+        {"$text": {"$search": search_string}}).sort([("_id", -1)])
+        
+    # counts number of results for of statement below    
+    results_count = mongo.db.fundraisers.count_documents(
+        {"$text": {"$search": search_string}})
+    
+    if request.method == 'POST':
+        
+        # If there is no search input flash the message
+        if search_string == '':
+            
+            flash('You have not provided any search input! Please type in a word or take a look at the fundraisers below.')
+            
+            return redirect('/get_fundraisers')
+        
+        # If no results display then flash this message showing their input     
+        elif results_count == 0:
+            
+            flash('No matching results found for "{search_input}". Please try a different search, browse through our fundraisers below and add a fundraiser')
+            
+            return redirect('/get_fundraisers')
+            
+        # Display search result
+        else:
+            
+            search_results
+    
+    return render_template("search-results.html", fundraisers=search_results)     
+    
+    
 # runs the app
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
         port=int(os.environ.get('PORT')),
-        debug=True)  
+        debug=False)  
         
 
 

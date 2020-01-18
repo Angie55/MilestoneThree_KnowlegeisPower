@@ -15,6 +15,12 @@
 <div class="container-fluid page-width-container page-padding-sm">
     <!--Header and introduction to fundraiser page-->
     <header class="page-headers">
+        <form action="{{ url_for('search') }}" method="POST">
+            <div class="form-group">
+                <label for="search_input">Search:</label>
+                <input type="text" name="search_input" class="form-control" id="search_input">
+            </div>
+        </form>   
         <h1 class="headers-position">Fundraisers Page</h1>
         <p>Take a look at this range of fundraisers and make a donation today. No matter how small, every donation is a wonderful gift to 
         support those who do not have easy access to education. Click read more to see more of the details and edit it if you see any corrections 
