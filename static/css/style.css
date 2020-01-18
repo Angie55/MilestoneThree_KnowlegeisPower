@@ -151,13 +151,10 @@ h1, h2, h3, h6 {
 }
 
 /*--------------------------------- Fundraisers page*/
-.search {
-   margin-top: 30px; 
+.search-block {
+    margin-bottom: 30px;
+    max-width: 50%;
 }
-
-.search-input {
-     max-width: 50%;
- }
 
 .page-link {
     color: #505050;
@@ -297,9 +294,7 @@ h1, h2, h3, h6 {
  
 /*--------------------------------- Search results*/
  
-.back-to-fundraisers {
-    margin-top: 30px;
-} 
+
 
 /*--------------------------------- Footer*/
 footer {
