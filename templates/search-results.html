@@ -3,16 +3,11 @@
 <div class="container-fluid page-width-container page-padding-sm page-height-lg">
     <header class="page-headers">
         <h1 class="headers-position">Search results</h1>
-        <p>If you didn't find the fundriaser you were looking for and know of one, please add it and help us spread the word! Head back to the fundraisers page to view the fundraisers we have.</p>
+        <p class='text-center'>If you didn't find the fundriaser you were looking for and know of one, please add it and help us spread the word!</p>
         <!--Link to add a new findraiser form-->
-        <div class="row">
-            <div class="col-6 text-center headers-button">
+            <div class=" text-center headers-button">
                 <a class="btn green-button" href="{{ url_for('add_fundraiser') }}" role="button">Add a fundraiser</a>
             </div>
-            <div class="col-6 text-center headers-button">
-                <a class="btn green-button" href="{{ url_for('get_fundraisers') }}" role="button">View all fundraiser</a>
-            </div>
-        </div>
     </header> 
     
     <hr class="general-hr fund-top-hr">
@@ -40,8 +35,8 @@
        
             <!--Link back to top of the page--> 
             <div class="row text-center">
-                <div class="col-12 back-to-top-link">
-                    <a href="#back-to-top">Back to top</a> 
+                <div class="col-12 back-to-fundraisers">
+                    <a href="{{ url_for('get_fundraisers') }}">Back to all fundraisers</a> 
                 </div>
             </div> 
         </div>

@@ -3,7 +3,7 @@
 {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
 
 <div class="alert alert-dismissible fade show alert-txt text-center" role="alert">
-  <strong>Success! </strong> {{ message }}
+  <p> {{ message }} </p>
   <button type="button" class="close alert-close " data-dismiss="alert" aria-label="Close">
     <i class="far fa-window-close"></i>
   </button>
@@ -15,12 +15,13 @@
 <div class="container-fluid page-width-container page-padding-sm">
     <!--Header and introduction to fundraiser page-->
     <header class="page-headers">
-        <form action="{{ url_for('search') }}" method="POST">
-            <div class="form-group">
-                <label for="search_input">Search:</label>
-                <input type="text" name="search_input" class="form-control" id="search_input">
-            </div>
-        </form>   
+        <div class="justify-content-center search">
+            <form action="{{ url_for('search') }}" method="POST">
+                <div class="form-group search-input">
+                    <input type="text" name="search_input" class="form-control" id="search_input" placeholder="Search keyword in title or country test">
+                </div>
+            </form>   
+        </div>
         <h1 class="headers-position">Fundraisers Page</h1>
         <p>Take a look at this range of fundraisers and make a donation today. No matter how small, every donation is a wonderful gift to 
         support those who do not have easy access to education. Click read more to see more of the details and edit it if you see any corrections 

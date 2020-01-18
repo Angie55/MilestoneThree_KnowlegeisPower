@@ -30,12 +30,12 @@ h1, h2, h3, h6 {
     height: 2px;
 }
 
-.back-to-top-link a {
+.back-to-top-link, .back-to-fundraisers a {
     color: #505050;
     transition: 0.5s;
 }
 
-.back-to-top-link a:hover {
+.back-to-top-link, .back-to-fundraisers a:hover {
     color: #ff8500;
     text-decoration: none;
 }
@@ -151,6 +151,13 @@ h1, h2, h3, h6 {
 }
 
 /*--------------------------------- Fundraisers page*/
+.search {
+   margin-top: 30px; 
+}
+
+.search-input {
+     max-width: 50%;
+ }
 
 .page-link {
     color: #505050;
@@ -288,10 +295,11 @@ h1, h2, h3, h6 {
       margin-bottom: 40px;
  }
  
- .search-input {
-     max-width: 50%;
- }
+/*--------------------------------- Search results*/
  
+.back-to-fundraisers {
+    margin-top: 30px;
+} 
 
 /*--------------------------------- Footer*/
 footer {
