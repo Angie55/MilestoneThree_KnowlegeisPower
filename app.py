@@ -201,7 +201,7 @@ def search():
         # If no results display then flash this message showing their input     
         elif results_count == 0:
             
-            flash('No matching results found for "{search_input}". Please try a different search, browse through our fundraisers below and add a fundraiser')
+            flash(f'No matching results found for "{search_input}". Please try a different search, browse through our fundraisers below and add a fundraiser')
             
             return redirect('/get_fundraisers')
             

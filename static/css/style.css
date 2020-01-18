@@ -288,6 +288,10 @@ h1, h2, h3, h6 {
       margin-bottom: 40px;
  }
  
+ .search-input {
+     max-width: 50%;
+ }
+ 
 
 /*--------------------------------- Footer*/
 footer {
@@ -387,11 +391,14 @@ footer a:hover  {
    .page-width-container {   
         width: 80%;
     }
+    .display-none-lg {
+        display: none;    
+    }
 }
 
 @media (min-width:1025px) {
-    .display-none-lg {
-        display: none;    
+    .page-height-lg {
+        min-height: 850px;
     }
 }
 
