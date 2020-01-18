@@ -21,14 +21,14 @@
             </section>
             <!--Displays fundraiser target and country-->
             <section class="text-center">
-                <div class="row justify-content-around margin-top-50px">
-                    <div class="col-xl-4 col-sm-8 targ-count-block target-country-border">
+                <div class="row justify-content-around targ-count-block">
+                    <div class="col-xl-4 col-sm-8 targ-count-style">
                         <div class="icon">
                             <i class="fas fa-pound-sign fund-info-icon"></i>
                         </div>
                         <div class="icon-info">
                             <h3 class="display-title">Target:</h3>
-                            <p class="target-country">{{fundraiser.fundraiser_target}}</p>
+                            <p class="targ-count-txt">{{fundraiser.fundraiser_target}}</p>
                         </div>
                     </div>
                     <div class="col-xl-4 col-sm-8 targ-count-block target-country-border country-display-sm">
@@ -53,7 +53,7 @@
             </section>
             <!--Buttons to add, edit and delete fundraiser-->
             <section>
-                <div class="row text-center justify-content-center margin-top-50px">
+                <div class="row text-center justify-content-center margin-top-50px btn-section">
                     <div class="col-sm-12 col-md-3">
                         <a class="btn btn-block green-button btn-space" href="{{ url_for('edit_fundraiser', fundraiser_id=fundraiser._id)}}" role="button">Edit this fundraiser</a>
                     </div>

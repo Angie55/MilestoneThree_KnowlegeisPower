@@ -33,6 +33,10 @@ h1, h2, h3, h6 {
     height: 2px;
 }
 
+.back-to-top-link {
+    margin-bottom: 50px;
+}
+
 .back-to-top-link, .back-to-fundraisers a {
     color: #505050;
     transition: 0.5s;
@@ -155,6 +159,7 @@ h1, h2, h3, h6 {
 
 /*--------------------------------- Fundraisers page*/
 .search-block {
+    margin-top: 20px;
     margin-bottom: 30px;
     max-width: 50%;
 }
@@ -198,17 +203,19 @@ h1, h2, h3, h6 {
     display: inline-block;
 }  
 
-.target-country{
+.targ-count-txt {
    font-size: 1.8em;
 }
 
-.target-country-border {
+.targ-count-style {
     border: 3px solid #03ADDF;
+    padding-top: 10px;
 }
 
 .targ-count-block {
-    padding-top: 10px;
-}
+    margin-top: 80px;
+    margin-bottom: 30px;
+} 
 
 .display-title {
     color: #03ADDF;
@@ -245,6 +252,10 @@ h1, h2, h3, h6 {
 .close-icon {
     color: white;
     font-size: 30px;
+}
+
+.btn-section {
+    margin-bottom: 50px;
 }
 
 
@@ -387,7 +398,7 @@ footer a:hover  {
     }
 }
 
-@media (max-width:1700px) {
+@media (max-width:1500px) {
     .log-reg-form {
         max-width: 80%;
     }
