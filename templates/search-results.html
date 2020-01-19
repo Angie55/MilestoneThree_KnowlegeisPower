@@ -1,9 +1,10 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="container-fluid page-width-container page-padding-sm">
+    <!--Header and introduction above display of search results-->
     <header class="page-headers">
         <h1 class="headers-position">Search results</h1>
-        <p class='text-center'>If you didn't find the fundriaser you were looking for and know of one, please add it and help us spread the word!</p>
+        <p class='text-center'>If you didn't find the fundraiser you were looking for and know of one, please add it and help us spread the word!</p>
         <!--Link to add a new findraiser form-->
             <div class=" text-center headers-button">
                 <a class="btn green-button" href="{{ url_for('add_fundraiser') }}" role="button">Add a fundraiser</a>
@@ -18,13 +19,13 @@
         {% for fundraiser in fundraisers %}  
             <!--Displays fundraiser image-->
             <div class="row justify-content-center">
-                <div class="col-xl-4 col-lg-6">
-                    <img class="img-fluid" src="{{fundraiser.fundraiser_image}}"> 
+                <div class="col-xl-6 col-lg-12">
+                    <img class="img-fluid" src="{{fundraiser.fundraiser_image}}" alt"fundraiser image added by user"> 
                 </div>  
                 <!--Displays fundraiser name and introduction-->
-                <div class="col-xl-4 col-lg-6">
+                <div class="col-xl-6 col-lg-12">
                     <h3 class="text-center fund-name-sm">{{fundraiser.fundraiser_name}}</h3>
-                    <p class="intro-fund-page">{{fundraiser.fundraiser_intro}}</p>
+                    <p class="fund-intro">{{fundraiser.fundraiser_intro}}</p>
                     <div class="text-center">
                         <a class="btn blue-btn read-more-btn" href="{{ url_for('fundraiser', fundraisers_id=fundraiser._id) }}" role="button">Read More</a>
                     </div>
@@ -33,7 +34,7 @@
             <hr class="thin-hr fundraising-hr">
         {% endfor %} 
        
-            <!--Link back to top of the page--> 
+            <!--Link back to all fundraisers page--> 
             <div class="row text-center">
                 <div class="col-12 back-to-fundraisers">
                     <a href="{{ url_for('get_fundraisers') }}">Back to all fundraisers</a> 
