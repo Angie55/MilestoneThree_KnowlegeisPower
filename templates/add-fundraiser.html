@@ -3,8 +3,8 @@
 <div class="container-fluid page-width-container page-padding-sm">
     <!--Form title and introduction-->
     <header class="form-header">
-        <h1 class="headers-position">Add fundraiser</h1>
-        <p class="text-center">Fill in the details of the fundraiser below to add it to our list of fundriasers.
+        <h1 class="headers-position">Add a fundraiser</h1>
+        <p class="text-center">Fill in the details of the fundraiser below to add it to our list of fundraisers.
         </p>
     </header>
     <!--Form for user to add a fundraiser-->
@@ -16,18 +16,18 @@
                 <form action="{{ url_for('insert_fundraiser') }}" method="POST">
                     <!--Fundraiser name/title-->
                     <div class="form-group">
-                        <label for="name">Fundraiser Name/Title:</label>
+                        <label for="fundraiser_name">Fundraiser Name/Title:</label>
                         <input type="text" name="fundraiser_name" class="form-control" id="fundraiser_name" required>
                     </div>
                     <!--Fundraiser target-->
                     <div class="form-group">
-                        <label for="target">Target amount to raise:</label>
-                        <input type="number" name="fundraiser_target" class="form-control" id="fundraiser_target" required
-                        placeholder="Please type the amount in pounds sterling.">
+                        <label for="fundraiser_target">Target amount to raise:</label>
+                        <input type="number" name="fundraiser_target" class="form-control" id="fundraiser_target" min="0" required
+                        placeholder="Please type the amount in £ sterling">
                     </div>
                     <!--Fundraiser country-->
                     <div class="form-group">
-                    <label for="country">Country of benificeries:</label>
+                    <label for="fundraiser_country">Country of beneficiaries:</label>
                     <select class="form-control selectpicker countrypicker" name="fundraiser_country" id="fundraiser_country">
                        <option value="" disabled selected>Select a country</option>
                        <option value="Afganistan">Afghanistan</option>
@@ -280,27 +280,27 @@
                     </div>
                     <!--Fundraiser image url-->
                     <div class="form-group">
-                        <label for="fund-image">Fundraiser image URL:</label>
+                        <label for="fundraiser_image">Fundraiser image URL:</label>
                         <input type="text" name="fundraiser_image" class="form-control" id="fundraiser_image" required
                         placeholder="Paste URL for fundraiser image">
                     </div>
                     <!--Fundraiser donation link-->
                     <div class="form-group">
-                        <label for="donation-link">Fundraiser donation page:</label>
+                        <label for="fundraiser_website_link">Fundraiser donation page:</label>
                         <input type="text" name="fundraiser_website_link" class="form-control" id="fundraiser_website_link" required
                         placeholder="Paste link to donation page">
                     </div>
                     <!--Fundraiser introduction-->
                     <div class="form-group">
-                        <label for="fundraiser-intro">Fundraiser introduction (240-450 characters):</label>
-                        <textarea class="form-control" name="fundraiser_intro" id="fundraiser_intro" rows="5" minlength="240" maxlength="450"required
-                        placeholder="Write a few sentances between 240-450 characters here to give a brief overview of the fundraiser."></textarea> 
+                        <label for="fundraiser_intro">Fundraiser introduction (250-450 characters):</label>
+                        <textarea class="form-control" name="fundraiser_intro" id="fundraiser_intro" rows="5" minlength="250" maxlength="450" required
+                        placeholder="Write a few sentances between 250-450 characters here to give a brief overview of the fundraiser."></textarea> 
                     </div>
                     <!--Fundraiser details-->
                     <div class="form-group">
-                        <label for="fundraiser-details">Fundraiser details (min of 450 characters):</label>
-                        <textarea class="form-control" name="fundraiser_details" id="fundraiser_details" rows="12" minlength="240" required 
-                        placeholder="Write the full decription here or copy and past the information from the fundraiser page. Please use a minimum of 450 characters."></textarea> 
+                        <label for="fundraiser_details">Fundraiser details (min of 400 characters):</label>
+                        <textarea class="form-control" name="fundraiser_details" id="fundraiser_details" rows="12" minlength="400" required 
+                        placeholder="Write the full decription here or paste the information from the fundraiser page. Please use a minimum of 400 characters."></textarea> 
                     </div>
                     <!-- Add Fundraiser submit button-->  
                     <button type="submit" class="btn form-btn green-button">Submit</button>

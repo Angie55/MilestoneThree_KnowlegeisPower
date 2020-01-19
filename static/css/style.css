@@ -277,6 +277,7 @@ h1, h2, h3, h6 {
 /*--------------------------------- All forms*/
  .form-block {
      margin-top: 50px;
+     margin-bottom: 80px;
      border: 5px solid #ff8500;
  }
  
@@ -391,6 +392,9 @@ footer a:hover  {
     .home-text {
     padding: 30px 5px;
     }
+    .form-header p {
+        padding: 0px 20px;
+    }
 }
 
 @media (max-width:1025px) {
@@ -424,7 +428,7 @@ footer a:hover  {
     }
     .form-block {
         max-width: 90%;
-        margin: 30px auto;
+        margin: 50px auto;
     }
     .form-content {
         padding: 40px 0px;
@@ -453,7 +457,7 @@ footer a:hover  {
         max-height: 300px;
         width: auto;
     }
-   .page-width-container {   
+    .page-width-container {   
         width: 80%;
     }
     .display-none-lg {
