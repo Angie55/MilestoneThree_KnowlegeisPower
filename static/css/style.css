@@ -131,13 +131,13 @@ h1, h2, h3, h6 {
 }
 
 
-/*--------------------------------- Fundraisers and  search results page*/
+/*--------------------------------- Fundraisers and search results page*/
 .intro-fund-page {
     margin-top: 30px;
 }
 
 .read-more-btn {
-   margin-top: 20px; 
+   margin-top: 40px; 
 }
 
 .fundraising-hr {
@@ -157,8 +157,9 @@ h1, h2, h3, h6 {
     max-width: 50%;
 }
 
-.search-icon {
-    font-family: "FontAwesome";
+.fas {
+    font-family: "Font Awesome 5 Free", 'Lato';
+    color: #d3d3d3;
 }
 
 .page-link {
@@ -418,11 +419,18 @@ footer a:hover  {
         padding: 40px 0px;
         max-width: 90%;
     }
+    .search-block {
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
 }
 
 @media (max-width:1500px) {
     .log-reg-form {
         max-width: 80%;
+    }
+    .read-more-btn {
+        margin-top: 20px;
     }
 }
 
@@ -433,7 +441,7 @@ footer a:hover  {
     .fundraiser-img {
         max-height: 300px;
         width: auto;
-   }
+    }
    .page-width-container {   
         width: 80%;
     }

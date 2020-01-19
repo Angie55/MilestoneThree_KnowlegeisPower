@@ -98,7 +98,7 @@ def get_fundraisers():
     It also sorts the fundraisers by ID in decending order so the newset
     one added is at the top of page 1.
     """
-    page_limit = 4  # Logic for pagination
+    page_limit = 6  # Logic for pagination
     current_page = int(request.args.get('current_page', 1))
     total = mongo.db.fundraisers.count()
     pages = range(1, int(math.ceil(total / page_limit)) + 1)
