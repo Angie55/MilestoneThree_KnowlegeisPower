@@ -10,9 +10,6 @@ h1, h2, h3, h6 {
     font-family: 'Oswald', sans-serif;
 }
 
-.margin-top-50px {
-    margin-top: 50px;
-}
 
 .headers-position {
     text-align: center;
@@ -37,12 +34,12 @@ h1, h2, h3, h6 {
     margin-bottom: 50px;
 }
 
-.back-to-top-link, .back-to-fundraisers a {
+.back-to-top-link a {
     color: #505050;
     transition: 0.5s;
 }
 
-.back-to-top-link, .back-to-fundraisers a:hover {
+.back-to-top-link a:hover {
     color: #ff8500;
     text-decoration: none;
 }
@@ -128,15 +125,11 @@ h1, h2, h3, h6 {
     margin-top: 10px;
 }
 
-.get-involved-hr {
+.home-spacing {
    margin-top: 50px;
    margin-bottom: 50px; 
 }
 
-.home-add-fund {
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
 
 /*--------------------------------- Fundraisers and  search results page*/
 .intro-fund-page {
@@ -164,6 +157,10 @@ h1, h2, h3, h6 {
     max-width: 50%;
 }
 
+.search-icon {
+    font-family: "FontAwesome";
+}
+
 .page-link {
     color: #505050;
 }
@@ -182,6 +179,14 @@ h1, h2, h3, h6 {
 }
 
 /*--------------------------------- Fundraiser information page*/
+.fund-info-page {
+    margin-top: 50px;
+} 
+
+.fund-info-spacing {
+    margin-top: 80px;
+}
+
 .alert-close {
     color: #505050;
     font-size: 30px;
@@ -191,6 +196,10 @@ h1, h2, h3, h6 {
     background-color: #dcefbc;
     color: #505050;
     border: 5px solid #94c83d;
+}
+
+.donation-btn {
+    margin-top: 30px;
 }
 
 .fund-info-icon{
@@ -212,10 +221,6 @@ h1, h2, h3, h6 {
     padding-top: 10px;
 }
 
-.targ-count-block {
-    margin-top: 80px;
-    margin-bottom: 30px;
-} 
 
 .display-title {
     color: #03ADDF;
@@ -233,6 +238,11 @@ h1, h2, h3, h6 {
 
 .delete-button-txt {
     color: white;
+    transition: 0.3s;
+}
+
+.delete-button-txt:hover {
+    color: #505050;
 }
 
 .close-btn {
@@ -255,7 +265,7 @@ h1, h2, h3, h6 {
 }
 
 .btn-section {
-    margin-bottom: 50px;
+    margin-bottom: 80px;
 }
 
 
@@ -307,7 +317,16 @@ h1, h2, h3, h6 {
  }
  
 /*--------------------------------- Search results*/
- 
+
+.back-to-fundraisers a {
+    color: #505050;
+    transition: 0.5s;
+}
+
+.back-to-fundraisers a:hover {
+    color: #ff8500;
+    text-decoration: none;
+}
 
 
 /*--------------------------------- Footer*/
@@ -356,6 +375,9 @@ footer a:hover  {
     }
     .btn-space-sm {
         margin-top: 30px;
+    }
+    .fund-info-spacing {
+        margin-top: 50px;
     }
 }
 
