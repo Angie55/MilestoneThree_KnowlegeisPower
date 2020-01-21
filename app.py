@@ -39,8 +39,9 @@ def login():
                 session['username'] = request.form['username']
                 session['logged_in'] = True
                 return redirect(url_for('index'))
-            flash('Sorry incorrect password!')
-            return redirect(url_for('login'))
+                
+        flash('Sorry incorrect password!')
+        return redirect(url_for('login'))
     return render_template('login.html')    
     
 @app.route('/register', methods=['GET', 'POST'])

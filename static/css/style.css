@@ -226,7 +226,6 @@ h1, h2, h3, h6 {
     padding-top: 10px;
 }
 
-
 .display-title {
     color: #03ADDF;
 }
@@ -293,14 +292,32 @@ h1, h2, h3, h6 {
  /*--------------------------------- register and login pages*/
   
   .log-reg-form {
-      max-width: 30%;
+      max-width: 40%;
   }
+  
   .log-reg-content {
      padding: 40px;
      max-width: 70%;
      margin: 10px auto;
   }
- 
+  
+  .leg-reg-info {
+      padding: 10px 10px 0px 10px;
+  }
+  
+  .log-reg-link {
+      margin-top: 20px;
+  }
+  
+  .log-reg-link a {
+    color: #ff8500;
+    transition: 0.5s;  
+  }
+  
+  .log-reg-link a:hover {
+    color: #505050;
+    text-decoration: none;
+  }
  
  
 /*--------------------------------- Add, edit and contact us forms*/
@@ -390,10 +407,16 @@ footer a:hover  {
         margin-top: 50px;
     }
     .home-text {
-    padding: 30px 5px;
+        padding: 30px 5px;
     }
     .form-header p {
         padding: 0px 20px;
+    }
+    .log-reg-form {
+        max-width: 95%;
+    }
+    .log-reg-content {
+     padding: 5px;
     }
 }
 
@@ -403,6 +426,13 @@ footer a:hover  {
     }
     .footer-info {
         margin-top: 40px;
+    }
+    .log-reg-form {
+        max-width: 80%;
+    }
+    .log-reg-content {
+     max-width: 90%;
+     margin: 10px auto;
     }
 }
 
@@ -441,9 +471,6 @@ footer a:hover  {
 }
 
 @media (max-width:1500px) {
-    .log-reg-form {
-        max-width: 80%;
-    }
     .read-more-btn {
         margin-top: 20px;
     }
@@ -470,6 +497,9 @@ footer a:hover  {
         padding-left: 40px;
         padding-right: 40px;
     }
+    .log-reg-form {
+      max-width: 30%;
+  }
 }
 
 
