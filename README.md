@@ -327,14 +327,14 @@ Enough fundraisers were added and deleted to create 3 pages and bring it back do
 
 ### Compatibility
 
-I tested 6 of the main browsers to ensure a broad range of users can successfully use this site in both desktop and mobile configuration.
+I tested the latest version 6 of the main browsers to ensure a broad range of users can successfully use this site in both desktop and mobile configuration.
 
-- Chrome *v.74*
-- Edge *v.18*
-- Firefox *v.67*
-- Safari *v.12*
-- Opera *v.56*
-- Internet Explorer *v.11*
+- Chrome 
+- Edge 
+- Firefox 
+- Safari 
+- Opera 
+- Internet Explorer 
 
 I have created a spreadsheet of my testing and results:
 
@@ -344,21 +344,26 @@ I have created a spreadsheet of my testing and results:
 
 ---
 
-## Deployment
+# Deployment
 
-# Local deployment
+## Local deployment
 
 The following will need to be installed on your own system/IDE in order to run this project locally:
 
 - Python 3 to run the application.
 - PIP to install all the app requirements.
-- GIT for version control and cloning- Clone from Github https://github.com/Angie55/MilestoneThree_KnowlegeisPower.git
-- MongoDB- you will need an account and to create a cluster and then in collections create a new database which should be called ‘knowledge_is_power'.
-- Then create 2 collections called ‘fundraisers' and 'users'. You can change these names but must be sure to amend the python file where these collection 
+- GIT for version control and cloning.
+
+- Sign up to [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)- to create the database.
+You will need to create a cluster and then in collections create a new database which should be called ‘knowledge_is_power'.
+Then create 2 collections called ‘fundraisers' and 'users'. You can change these names but must be sure to amend the python file where these collection 
 names occur in order to connect with the database.
-The fundraiser 
 
-
-
-
+- Clone this GitHub repository by either clicking the green *Clone or download* button and downloading the project as a zip-file (unzip it first), or by entering the following into the Git CLI terminal:
+    - `https://github.com/Angie55/MilestoneThree_KnowlegeisPower.git`.
+- - Install all requirements from the requirements.txt file using this command:
+    - `pip -r requirements.txt.`
+- Create a secret key and put this in the .bashrc and set it as an environment variable as *SECRET_KEY*.
+- Set the Mongo URI as an environment variable in the .bashrc 
+- You should now be able to run the app.
 
