@@ -1,4 +1,4 @@
-# [Knowledge is Power]()
+# [Knowledge is Power](https://knowledge-is-power-milestone.herokuapp.com/)
 
 Knowledge is Power is a app for users to view fundraiser focused on raising money to educate people around the world. 
 The idea comes from the belief that teaching even basic skills is the key to getting people out of poverty and able to
@@ -18,9 +18,6 @@ for the 3rd milestone project.
 -To create a basic log in feature 
 
 -To gain knowledge and improve on what I have learnt on the creation of a CRUD application from start to finish.
-
-
-<img src="" alt="" width="800">
 
 ---
 
