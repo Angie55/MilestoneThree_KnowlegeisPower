@@ -288,38 +288,6 @@ h1, h2, h3, h6 {
      margin-top: 20px;
  }
  
- 
- /*--------------------------------- register and login pages*/
-  
-  .log-reg-form {
-      max-width: 40%;
-  }
-  
-  .log-reg-content {
-     padding: 40px;
-     max-width: 70%;
-     margin: 10px auto;
-  }
-  
-  .leg-reg-info {
-      padding: 10px 10px 0px 10px;
-  }
-  
-  .log-reg-link {
-      margin-top: 20px;
-  }
-  
-  .log-reg-link a {
-    color: #ff8500;
-    transition: 0.5s;  
-  }
-  
-  .log-reg-link a:hover {
-    color: #505050;
-    text-decoration: none;
-  }
- 
- 
 /*--------------------------------- Add, edit and contact us forms*/
  .form-header {
      margin-top: 30px;
@@ -412,12 +380,6 @@ footer a:hover  {
     .form-header p {
         padding: 0px 20px;
     }
-    .log-reg-form {
-        max-width: 95%;
-    }
-    .log-reg-content {
-     padding: 5px;
-    }
 }
 
 @media (max-width:1025px) {
@@ -426,13 +388,6 @@ footer a:hover  {
     }
     .footer-info {
         margin-top: 40px;
-    }
-    .log-reg-form {
-        max-width: 80%;
-    }
-    .log-reg-content {
-     max-width: 90%;
-     margin: 10px auto;
     }
 }
 
@@ -497,9 +452,6 @@ footer a:hover  {
         padding-left: 40px;
         padding-right: 40px;
     }
-    .log-reg-form {
-      max-width: 30%;
-  }
 }
 
 

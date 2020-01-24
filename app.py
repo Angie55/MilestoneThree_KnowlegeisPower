@@ -19,62 +19,7 @@ mongo = PyMongo(app)
 
 
 # displays home page
-
-# route to login page 
 @app.route('/')
-@app.route('/login', methods=['POST', 'GET'])
-def login():
-    """Function for handling the logging in of users"""
-    if 'logged_in' in session:  # Check is already logged in
-        return redirect(url_for('index'))
-        
-    if request.method == 'POST':
-        user = mongo.db.users
-        logged_in_user = user.find_one({
-                                'username': request.form['username'].title()})
-
-        if logged_in_user:
-            if check_password_hash(logged_in_user['password'],
-                                   request.form['password']):
-                session['username'] = request.form['username']
-                session['logged_in'] = True
-                return redirect(url_for('index'))
-                
-        flash('Sorry incorrect password!')
-        return redirect(url_for('login'))
-    return render_template('login.html')    
-    
-@app.route('/register', methods=['GET', 'POST'])
-def register():
-    """Function for handling the registration of users"""
-    if 'logged_in' in session:  # Check is user already logged in
-        return redirect(url_for('index'))
-
-    if request.method == 'POST':
-
-        user = mongo.db.users
-        dup_user = user.find_one({'username': request.form['username'].title()})
-
-        if dup_user is None:
-            hash_pass = generate_password_hash('password')
-            user.insert_one({'username': request.form['username'].title(),
-                             'password': hash_pass})
-            session['username'] = request.form['username']
-            session['logged_in'] = True
-            return redirect(url_for('index'))
-
-        flash('Sorry, username already taken. Please try another. If you have an account please login')
-        return redirect(url_for('register'))
-    return render_template('register.html')
-    
-  
-@app.route('/logout')
-def logout():
-    """Logs the user out and redirects to home"""
-    session.clear()  # Kill session
-    return redirect(url_for('login'))    
-
-# displays  home page
 @app.route('/index')
 def index():
     return render_template("index.html")
@@ -85,8 +30,6 @@ def contact_us():
     return render_template("contact-us.html")    
     
 
-    
-    
 # Read
 
 # displays fundraisers from the database on the fundraisers page  
@@ -208,17 +151,12 @@ def search():
             
         # Display search result
         else:
-            
             search_results
-    
-    return render_template("search-results.html", fundraisers=search_results)     
-    
+    return render_template("search-results.html", fundraisers=search_results)  
     
 # runs the app
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
         port=int(os.environ.get('PORT')),
-        debug=False)  
+        debug=False)
         
-
-
