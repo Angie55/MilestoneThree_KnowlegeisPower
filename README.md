@@ -148,15 +148,15 @@ viewed when the link is clicked.
 -The fundraisers can be searched by a keyword in the title if by the country. These display on a new page. The user stays on 
 the fundraisers page if no results are found or there is no input.
 
-**Register**
-
-**Login**
 
 ### Features Left to Implement
 These features are things I had planned to implement but did not have the time, some basic parts of this project took me longer than expected
 as I'm very new to backend coding and need a lot more practice to get my head around things. With the knowledge I have now I could plan my time 
-a lot better to allow time for all planned features. I do not believe any features in this list are part of the grading, to my knowledge I have
-for filled the project requirements.
+a lot better to allow time for all planned features. The features in this list are not part of the grading but were fetures I wanted to add for 
+development.
+
+**Register/Login**
+
 
 **Users image upload** 
 -I wanted users to be able to upload an image from file as this would be more reliable and predictable in terms the way it displays on the app. 
@@ -178,8 +178,6 @@ As a basic standard i would add:
 - the use of email in registering
 - a uer account page to update details
 
-**Username displayed on main nav**
--It would be helpful for the user to have information in the main nav that they are logged in and the username they are logged in as.
 
 ### Possible future development ideas
 This developments were not planned as part of the project but are ideas that could maybe be considered in future.
@@ -196,7 +194,7 @@ themselves. The images would be education themed.
 to get the fundraiser to it's target quicker.
 
 **Info on who add,edited or deleted and the date**
-If users had accounts there could be a display of who uploaded or last edited a fundraiser as a way to monitor mis-use.  
+If users had accounts there could be a display of who uploaded or last edited a fundraiser as a way to monitor miss-use.  
 
 ##### back to [top](#table-of-contents)
 
@@ -367,3 +365,17 @@ names occur in order to connect with the database.
 - Set the Mongo URI as an environment variable in the .bashrc 
 - You should now be able to run the app.
 
+## Remote deployment
+
+This site has been deployed on Heroku using the master branch on Github. The following steps were taken to deploy this project:
+
+- A requirement.txt file was created so Heroku can install the required dependencies to run the app. This was created by typing sudo pip3 freeze –local > requirements.txt into the git bash terminal. It is important this is done before attempting to deploy on Heroku is order for it to work.
+- A Profile was created which tells Heroku what type of application is being deployed and how to run it. This was created with the command echo web: python run.py > Profile
+- I logged into my heroku account, a free account can be created. Once logged in …….
+- I went to the ‘Setting tab’ and clicked ‘Reveal Config Vars’ to add the following environment variables:
+   - IP: 0:0:0:0
+   - PORT: 8080
+- MONGO_URI: <pasted link to my MongoDB> (the same link that is in the bash.rc saved as an environment variable)
+- SECRET_KEY: <pasted my secret key> (the same link that is in the bash.rc saved as an environment variable)
+- I went to the deploy tab and selected the option to ‘Connect Github’ as the deployment method and also selected ‘Enable Automatic Deployment’. This means each time I click deploy or view the site using the link it will be up to date with my latest commit to Github.
+- I clicked ‘Deploy’ on the ….page and my project was successfully deployed.
