@@ -22,8 +22,13 @@ mongo = PyMongo(app)
 def index():
     return render_template("index.html")
     
-@app.route('/contact_us')
+@app.route('/contact_us', methods=['GET', 'POST'])
 def contact_us():
+    
+    if request.method == 'POST':
+    
+        flash('Thank you! We will be in touch shortly')
+    
     return render_template("contact-us.html")    
     
 # Read

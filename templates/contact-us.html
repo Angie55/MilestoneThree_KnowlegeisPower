@@ -46,15 +46,24 @@
             </ul>
         </div>
     </nav>
+    
+    {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+    <!--Displays an alert with a flash message set in app.py when action taken that requires feedback-->
+    <div class="alert alert-dismissible fade show alert-txt text-center" role="alert">
+      <p> {{ message }} </p>
+      <button type="button" class="close alert-close " data-dismiss="alert" aria-label="Close">
+        <i class="far fa-window-close"></i>
+      </button>
+    </div>
+
+{% endfor %} {% endif %} {% endwith %}
 
     <div class="container-fluid page-width-container page-padding-sm">
         
         <header class="form-header">
             <!--Form title and introduction-->
             <h1 class="headers-position">Contact us</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            <p class="text-center">Please fill out the form below if you would like to get in touch with us. 
             </p>
         </header>
         <!--Form for user to make contact-->
