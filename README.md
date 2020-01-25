@@ -115,74 +115,64 @@ My wireframes for this project can be found [here](https://github.com/Angie55/Mi
 ### Existing Features
 
 **Create**
--Add a recipe allows users to add fundraisers. The form has a defensive design as all forms are required to submit and the user
+- Add a recipe allows users to add fundraisers. The form has a defensive design as all forms are required to submit and the user
 sill see guided feedback to support them. Minimum characters are set where needed to ensure some information is added.
 
 **Read**
--All fundraisers can be viewed with 6 visible on page at a time. They are displayed newest to oldest so users see the latest 
+- All fundraisers can be viewed with 6 visible on page at a time. They are displayed newest to oldest so users see the latest 
 addition first and see newly added fundraisers immediately at the top. More information and details of each fundraiser can be 
 viewed when the link is clicked. 
 
 **Update**
--All fundraisers can be edited from the fundraiser info page. The defensive designs follows the same rules as when adding a fundraiser.
+- All fundraisers can be edited from the fundraiser info page. The defensive designs follows the same rules as when adding a fundraiser.
 
 **Delete**
--Fundraisers can be removed after 2 clicks with a warning on the first. The defensive design ensures it is not too easy for users to delete a fundraiser.
+- Fundraisers can be removed after 2 clicks with a warning on the first. The defensive design ensures it is not too easy for users to delete a fundraiser.
 
 **Search**
--The fundraisers can be searched by a keyword in the title if by the country. These display on a new page. The user stays on 
+- The fundraisers can be searched by a keyword in the title if by the country. These display on a new page. The user stays on 
 the fundraisers page if no results are found or there is no input.
 
 
 ### Features Left to Implement
 These features are things I had planned to implement but did not have the time, some basic parts of this project took me longer than expected
 as I'm very new to backend coding and need a lot more practice to get my head around things. With the knowledge I have now I could plan my time 
-a lot better to allow time for all planned features. The features in this list are not part of the grading but were fetures I wanted to add for 
+a lot better to allow time for all planned features. The features in this list are not part of the grading but were features I wanted to add for 
 development.
 
 **Register/Login**
--A attempt was made to set this up but i spent alot of time researching to get myhead around the basics that there was not time to implement to 
+- An attempt was made to set this up but I spent alot of time researching to get my head around the basics that there was not time to implement to 
 a good enough standard before submission.
 
-I have included some details of my attempt [here](https://github.com/Angie55/MilestoneThree_KnowlegeisPower/tree/master/static/images/readme-docs/login-register-writeup.pdf)
+I have included some details of my attempt [here](https://github.com/Angie55/MilestoneThree_KnowlegeisPower/blob/master/static/images/readme-docs/login-register-writeup.pdf)
 
 **Users image upload** 
--I wanted users to be able to upload an image from file as this would be more reliable and predictable in terms the way it displays on the app. 
+- I wanted users to be able to upload an image from file as this would be more reliable and predictable in terms the way it displays on the app. 
 It would have size guides and restrictions as well as still display even if the link is broken or images changed on the fundraiser page. 
 
 **Filters**
--This would include the choice of displaying the fundraisers as newest or oldest first, by order of target amount. As the app potentially
+- This would include the choice of displaying the fundraisers as newest or oldest first, by order of target amount. As the app potentially
 grows with alot of fundraisers it would be good to have a choice of ways to search
 
-**Contact us- email sends**
--I wanted to add a contact page that users could fill in that would send me an email.
-
-**Password match check and change password**
-The current login/ register is very basic as a first practice, it was not part of the requirements for the project but i wanted to give it a go.
-As a basic standard i would add:
-- a confirm password to make sure the user is sure of their password.
-- more restriction/rules on the password such as it having to have a cap letter and number.
-- an option to reset the password
-- the use of email in registering
-- a uer account page to update details
-
+**Contact us**
+- I wanted to add a contact page that users could fill in that would send me an email.
 
 ### Possible future development ideas
 This developments were not planned as part of the project but are ideas that could maybe be considered in future.
 
 **Fundraiser default image**
-It could be a good idea for users who have difficulty finding a good image to be able to choose from a few attracive images in place of uploading one 
+- It could be a good idea for users who have difficulty finding a good image to be able to choose from a few attracive images in place of uploading one 
 themselves. The images would be education themed.
 
 **Categories**
--Potentially there could be seperate categories for fundraiser for childrena dn adults.
+- Potentially there could be seperate categories for fundraiser for childrena dn adults.
 
 **Close to target tick box**
--it would be good is users could click a star icon when fundraisesr are close to target and user could also filter to them. This would be to inspire a last push 
+- It would be good is users could click a star icon when fundraisesr are close to target and user could also filter to them. This would be to inspire a last push 
 to get the fundraiser to it's target quicker.
 
 **Info on who add,edited or deleted and the date**
-If users had accounts there could be a display of who uploaded or last edited a fundraiser as a way to monitor miss-use.  
+- If users had accounts there could be a display of who uploaded or last edited a fundraiser as a way to monitor miss-use.  
 
 ##### back to [top](#table-of-contents)
 
@@ -290,23 +280,19 @@ Enough fundraisers were added and deleted to create 3 pages and bring it back do
 - A page is removed when deleting a fundraisers bring the number down to 6 from 7 for example.
 - The current page is clearly highlighted and the page switches to the page number that is clicked on.
 
-### General tests
-
-### Homepage, Fundraisers page and fundraiser info pages
-
 ### Images
 
-- Favicon and logo display on all pages. Images are responsive and resize well. 
+- Favicon and logo display on all pages. Images are responsive and resize well. See bugs and fixes for slight issue. 
 
 ### Links and buttons
 
 - All links go to the correct page when clicked and open in a new tab where this is set.
 - All links and button have hover effects that work and give the user feedback that they can click.
 
+### Bugs and known issues
 
-### Bug, fixes and future ideas
-
-- Edit form- had some issue displaying the intro and details in the form fields.
+- Fundraisers images are not centered when the screen width is 830px-1025px wide.
+- When on the edit fundraiser form, if the user did not edit it and navigates away form the page, a flash message still appears that it has been successfully updated.
 - User feedback (for add,edit etc)- this site currently uses the same green alert to let the user know when forms are submitted but also when search results.
 - Search- full words need to be typed, this could be developed to search for partial words to help with miss typing/spelling.
 - Pagination could be added to the search in future in anticipation that there will be enough for it to be too many to scroll through at a time.
@@ -322,9 +308,7 @@ I tested the latest version 6 of the main browsers to ensure a broad range of us
 - Opera 
 - Internet Explorer 
 
-I have created a spreadsheet of my testing and results:
-
-<add link>
+I have created a spreadsheet of my testing and results that you can view [here](https://github.com/Angie55/MilestoneThree_KnowlegeisPower/blob/master/static/images/readme-docs/testing-matrix.pdf)
 
 ##### back to [top](#table-of-contents)
 
@@ -345,7 +329,7 @@ You will need to create a cluster and then in collections create a new database 
 Then create a collection called ‘fundraisers'. You can change this name but must be sure to amend the python file where these collection 
 name occurs in order to connect with the database. 
 
-<img src="https://github.com/Angie55/MilestoneThree_KnowlegeisPower/tree/master/static/images/readme-docs/mongo_fundraisers.png" alt="MongoDB collection screen shot" width="800">
+<img src="https://github.com/Angie55/MilestoneThree_KnowlegeisPower/blob/master/static/images/readme-docs/mongo_fundraisers.png" alt="MongoDB collection screen shot" width="800">
 
 - Clone this GitHub repository by either clicking the green *Clone or download* button and downloading the project as a zip-file (unzip it first), or by entering the following into the Git CLI terminal:
     - `https://github.com/Angie55/MilestoneThree_KnowlegeisPower.git`.
@@ -362,7 +346,7 @@ This site has been deployed on Heroku using the master branch on Github. The fol
 - A requirement.txt file was created so Heroku can install the required dependencies to run the app. This was created by typing 'sudo pip3 freeze –local > requirements.txt' into the git bash terminal. It is 
 important this is done before attempting to deploy on Heroku is order for it to work.
 - A Profile was created which tells Heroku what type of application is being deployed and how to run it. This was created with the command 'echo web: python run.py > Profile'.
-- I logged into my heroku account, a free account can be created, ten created a new app named 'knowledge-is-power-milestone'.
+- I logged into my heroku account, a free account can be created, then created a new app named 'knowledge-is-power-milestone'.
 - I went to the ‘Setting' tab and clicked ‘Reveal Config Vars’ to add the following environment variables:
    - IP: 0:0:0:0
    - PORT: 8080
@@ -372,5 +356,10 @@ important this is done before attempting to deploy on Heroku is order for it to 
 is deployed it will be up-to-date with the latest chnages.  
 - I clicked ‘Deploy Branch’ on the 'Deploy' page in the 'Manual deploy' section and my project was successfully deployed.
 
+##### back to [top](#table-of-contents)
 
+# Acknowledgements
 
+## Media
+
+## Code
