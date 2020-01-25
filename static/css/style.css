@@ -10,7 +10,6 @@ h1, h2, h3, h6 {
     font-family: 'Oswald', sans-serif;
 }
 
-
 .headers-position {
     text-align: center;
     margin-top: 30px;
@@ -65,7 +64,6 @@ h1, h2, h3, h6 {
     color: #505050;
 }
 
-
 /*--------------------------------- Main Navigation*/
 .nav {
     border-bottom: 10px solid #ff8500;
@@ -86,6 +84,7 @@ h1, h2, h3, h6 {
     margin-top: 10px;
     font-size: 30px;
 }
+
 .navbar-toggler {
     padding: 4px 0px;
 }
@@ -133,7 +132,6 @@ h1, h2, h3, h6 {
 .home-add-btn {
     margin-bottom: 50px;
 }
-
 
 /*--------------------------------- Fundraisers and search results page*/
 .fund-intro {
@@ -272,7 +270,6 @@ h1, h2, h3, h6 {
     margin-bottom: 80px;
 }
 
-
 /*--------------------------------- All forms*/
  .form-block {
      margin-top: 50px;
@@ -322,7 +319,6 @@ h1, h2, h3, h6 {
     color: #ff8500;
     text-decoration: none;
 }
-
 
 /*--------------------------------- Footer*/
 footer {

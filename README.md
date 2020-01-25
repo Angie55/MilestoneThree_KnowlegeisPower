@@ -199,7 +199,6 @@ to get the fundraiser to it's target quicker.
 - **Flask**
     - [Flask 1.1.1](http://flask.pocoo.org/) - Used as a microframework.
     - [Jinja2 2.10.3](http://jinja.pocoo.org/docs/2.10/) - Used for templating with Flask.
-    - [Werkzeug 0.16.0](https://werkzeug.palletsprojects.com/en/0.16.x/) - Used for password hashing and checking the password.
 - **Heroku**
     - [Heroku](https://www.heroku.com) - Used for app hosting.
 - **Python**    
@@ -214,6 +213,9 @@ to get the fundraiser to it's target quicker.
 ## Testing
 
 ### Validators
+
+- HTML [W3C HTML Validator](https://validator.w3.org/)- All pages pass, errors show due to jinja code but this is expected.
+- CSS [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator)- Passed.
 
 ### Add a fundraiser
 
@@ -314,9 +316,9 @@ I have created a spreadsheet of my testing and results that you can view [here](
 
 ---
 
-# Deployment
+## Deployment
 
-## Local deployment
+### Local deployment
 
 The following will need to be installed on your own system/IDE in order to run this project locally:
 
@@ -339,7 +341,7 @@ name occurs in order to connect with the database.
 - Set the Mongo URI as an environment variable in the .bashrc 
 - You should now be able to run the app.
 
-## Remote deployment
+### Remote deployment
 
 This site has been deployed on Heroku using the master branch on Github. The following steps were taken to deploy this project:
 
@@ -358,8 +360,25 @@ is deployed it will be up-to-date with the latest chnages.
 
 ##### back to [top](#table-of-contents)
 
-# Acknowledgements
+## Acknowledgements
 
-## Media
+### Media
 
-## Code
+Images were sourced from:
+
+- [Save the children](https://www.savethechildren.org.uk/what-we-do/education) - (one image on the homepage)
+
+- [Pixabay](https://pixabay.com/)- All other images apart from fundraisers added by users.
+
+### Credits
+
+- The CRUD functions were created following tutorials by [Code Institute](https://codeinstitute.net/)
+
+- Slack was used a s source of information. Many questions I entered in the search had already been answered and I 
+looked at the suggested code from mentors and students.  All code had to be modified to fit my project. The 
+pagination and search are examples or looking at various fellow students code and putting together what worked for me.
+
+
+**Disclaimer**- This app was created for education purposes.
+
+
