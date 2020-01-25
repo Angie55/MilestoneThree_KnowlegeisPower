@@ -9,15 +9,15 @@ on any they really resonate with them.
 
 ## Developer goals
 
--To create a app with Flask and MongoDB that has the CRUD operations of Create, Read, Update and Delete to showcase skills 
+- To create a app with Flask and MongoDB that has the CRUD operations of Create, Read, Update and Delete to showcase skills 
 learnt in the data centric development module of the [Code Institute](https://codeinstitute.net/) course I am taking. This app was created 
 for the 3rd milestone project.
 
--To create an aesthetically pleasing and easy to navigate app with clear feedback for users.
+- To create an aesthetically pleasing and easy to navigate app with clear feedback for users.
 
--To create a basic log in feature 
+- To create a basic log in feature 
 
--To gain knowledge and improve on what I have learnt on the creation of a CRUD application from start to finish.
+- To gain knowledge and improve on what I have learnt on the creation of a CRUD application from start to finish.
 
 ---
 
@@ -214,8 +214,11 @@ to get the fundraiser to it's target quicker.
 
 ### Validators
 
-- HTML [W3C HTML Validator](https://validator.w3.org/)- All pages pass, errors show due to jinja code but this is expected.
-- CSS [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator)- Passed.
+- HTML- [W3C HTML Validator](https://validator.w3.org/)- All pages pass, errors show due to jinja code but this is expected.
+- CSS- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator)- Passed.
+- Python- [PEP8 Online](http://pep8online.com/checkresult)- I fixed any under/over indented, trailing white space and or other unneeded spaces.
+ I found some changes seemed to effect the code and I can't risk changing something that effects the app working right now. I will use the 
+validator as I go in future as I do with CSS and HTML to ensure my code is fully complient.
 
 ### Add a fundraiser
 
@@ -345,10 +348,11 @@ name occurs in order to connect with the database.
 
 This site has been deployed on Heroku using the master branch on Github. The following steps were taken to deploy this project:
 
-- A requirement.txt file was created so Heroku can install the required dependencies to run the app. This was created by typing 'sudo pip3 freeze –local > requirements.txt' into the git bash terminal. It is 
+- A requirement.txt file was created so Heroku can install the required dependencies to run the app. This was created by typing 
+`sudo pip3 freeze –local > requirements.txt` into the git bash terminal. It is 
 important this is done before attempting to deploy on Heroku is order for it to work.
-- A Profile was created which tells Heroku what type of application is being deployed and how to run it. This was created with the command 'echo web: python run.py > Profile'.
-- I logged into my heroku account, a free account can be created, then created a new app named 'knowledge-is-power-milestone'.
+- A Profile was created which tells Heroku what type of application is being deployed and how to run it. This was created with the command `echo web: python run.py > Profile`.
+- I logged into my Heroku account, a free account can be created, then created a new app named 'knowledge-is-power-milestone'.
 - I went to the ‘Setting' tab and clicked ‘Reveal Config Vars’ to add the following environment variables:
    - IP: 0:0:0:0
    - PORT: 8080
@@ -381,4 +385,4 @@ pagination and search are examples or looking at various fellow students code an
 
 **Disclaimer**- This app was created for education purposes.
 
-
+##### back to [top](#table-of-contents)
