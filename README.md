@@ -90,7 +90,7 @@ for the 3rd milestone project.
 -Be able to log in and log out
 -Register an account
 
-### Design
+### Design-
 
 
 #### Color Scheme
@@ -142,7 +142,7 @@ viewed when the link is clicked.
 -All fundraisers can be edited from the fundraiser info page. The defensive designs follows the same rules as when adding a fundraiser.
 
 **Delete**
--Fundraisers can be removed after 2 clicks with a warning on the first. The defensive design 
+-Fundraisers can be removed after 2 clicks with a warning on the first. The defensive design ensures it is not too easy for users to delete a fundraiser.
 
 **Search**
 -The fundraisers can be searched by a keyword in the title if by the country. These display on a new page. The user stays on 
@@ -156,7 +156,10 @@ a lot better to allow time for all planned features. The features in this list a
 development.
 
 **Register/Login**
+-A attempt was made to set this up but i spent alot of time researching to get myhead around the basics that there was not time to implement to 
+a good enough standard before submission.
 
+I have included some details of my attempt [here](https://github.com/Angie55/MilestoneThree_KnowlegeisPower/tree/master/static/images/readme-docs/login-register-writeup.pdf)
 
 **Users image upload** 
 -I wanted users to be able to upload an image from file as this would be more reliable and predictable in terms the way it displays on the app. 
@@ -354,12 +357,14 @@ The following will need to be installed on your own system/IDE in order to run t
 
 - Sign up to [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)- to create the database.
 You will need to create a cluster and then in collections create a new database which should be called ‘knowledge_is_power'.
-Then create 2 collections called ‘fundraisers' and 'users'. You can change these names but must be sure to amend the python file where these collection 
-names occur in order to connect with the database.
+Then create a collection called ‘fundraisers'. You can change this name but must be sure to amend the python file where these collection 
+name occurs in order to connect with the database. 
+
+<img src="https://github.com/Angie55/MilestoneThree_KnowlegeisPower/tree/master/static/images/readme-docs/mongo_fundraisers.png" alt="MongoDB collection screen shot" width="800">
 
 - Clone this GitHub repository by either clicking the green *Clone or download* button and downloading the project as a zip-file (unzip it first), or by entering the following into the Git CLI terminal:
     - `https://github.com/Angie55/MilestoneThree_KnowlegeisPower.git`.
-- - Install all requirements from the requirements.txt file using this command:
+- Install all requirements from the requirements.txt file using this command:
     - `pip -r requirements.txt.`
 - Create a secret key and put this in the .bashrc and set it as an environment variable as *SECRET_KEY*.
 - Set the Mongo URI as an environment variable in the .bashrc 
@@ -369,13 +374,18 @@ names occur in order to connect with the database.
 
 This site has been deployed on Heroku using the master branch on Github. The following steps were taken to deploy this project:
 
-- A requirement.txt file was created so Heroku can install the required dependencies to run the app. This was created by typing sudo pip3 freeze –local > requirements.txt into the git bash terminal. It is important this is done before attempting to deploy on Heroku is order for it to work.
-- A Profile was created which tells Heroku what type of application is being deployed and how to run it. This was created with the command echo web: python run.py > Profile
-- I logged into my heroku account, a free account can be created. Once logged in …….
-- I went to the ‘Setting tab’ and clicked ‘Reveal Config Vars’ to add the following environment variables:
+- A requirement.txt file was created so Heroku can install the required dependencies to run the app. This was created by typing 'sudo pip3 freeze –local > requirements.txt' into the git bash terminal. It is 
+important this is done before attempting to deploy on Heroku is order for it to work.
+- A Profile was created which tells Heroku what type of application is being deployed and how to run it. This was created with the command 'echo web: python run.py > Profile'.
+- I logged into my heroku account, a free account can be created, ten created a new app named 'knowledge-is-power-milestone'.
+- I went to the ‘Setting' tab and clicked ‘Reveal Config Vars’ to add the following environment variables:
    - IP: 0:0:0:0
    - PORT: 8080
-- MONGO_URI: <pasted link to my MongoDB> (the same link that is in the bash.rc saved as an environment variable)
-- SECRET_KEY: <pasted my secret key> (the same link that is in the bash.rc saved as an environment variable)
-- I went to the deploy tab and selected the option to ‘Connect Github’ as the deployment method and also selected ‘Enable Automatic Deployment’. This means each time I click deploy or view the site using the link it will be up to date with my latest commit to Github.
-- I clicked ‘Deploy’ on the ….page and my project was successfully deployed.
+   - MONGO_URI: <pasted link to my MongoDB> (the same link that is in the bash.rc saved as an environment variable)
+   - SECRET_KEY: <pasted my secret key> (the same link that is in the bash.rc saved as an environment variable)
+- I went to the 'Deploy' tab and selected the option to ‘Connect Github’ as the deployment method and also selected ‘Enable Automatic Deployment’. This means each time I commit changes to GitHub once the app 
+is deployed it will be up-to-date with the latest chnages.  
+- I clicked ‘Deploy Branch’ on the 'Deploy' page in the 'Manual deploy' section and my project was successfully deployed.
+
+
+
