@@ -26,9 +26,7 @@ for the 3rd milestone project.
     - [**User Stories**](#user-stories)
     - [**Design**](#design)
         - [**Color Scheme**](#color-scheme)
-        - [**Layout**](#layout)
         - [**Typography**](#typography)
-        - [**Imagery**](#imagery)
     - [**Wireframes**](#wireframes)
 
 2. [**Features**](#features)
@@ -47,18 +45,15 @@ for the 3rd milestone project.
     - [**Delete a fundraiser**](#delete-a-fundraiser)
     - [**Search**](#search)
     - [**Pagination**](#pagination)
-    - [**General tests**](#general-tests)
 
 5. [**Deployment**](#deployment)
     - [**Local Deployment**](#local-deployment)
     - [**Remote Deployment**](#remote-deployment)
 
-6. [**Credits**](#credits)
-    - [**Content**](#content)
+6. [**Acknowledgements**](#acknowledgements)
     - [**Media**](#media)
     - [**Code**](#code)
-    - [**Acknowledgements**](#acknowledgements)
-
+    
 ---
 
 ## UX
@@ -68,30 +63,26 @@ for the 3rd milestone project.
 
 "**_Users who would be interested in the app_** ____"
 
--Philanthropists and genera charity donors looking for ways they can help spread the word or contribute to education funds.
+- Philanthropists and genera charity donors looking for ways they can help spread the word or contribute to education funds.
 
--Fundraisers who have create a donation page and would like to raise awareness.
+- Fundraisers who have create a donation page and would like to raise awareness.
 
 
 "**_As a user I would like to_** ____"
--View the site on various devices from a large desktop to a mobile
--See a homepage with information about the site and how I can get involved/what I can do.
--To add fundraisers with an easy to follow form
--To edit fundraisers added by myself or others if I have an update.
--To delete fundraisers that have ended
--To view the newest first and see added ones appear at the top.
--To be able to search by title to see if a fundraiser I know is there. 
--To be able to search by country of the fundraisers beneficiaries. 
--View a limited number of fundraisers at a time so I don’t have to scroll forever if there are a lot of fundraisers.
--View a range of fundraisers at a glance on one page and read more if I choose.
--Read about the fundraisers- the target to raise, country of beneficiaries and have some details about it.
--Have a clear link to the page I can donate to the fundraiser on.
--See feedback when I submit a form/login or out/register etc.
--Be able to log in and log out
--Register an account
+- View the site on various devices from a large desktop to a mobile.
+- See a homepage with information about the site and how I can get involved/what I can do.
+- To add fundraisers with an easy to follow form.
+- To edit fundraisers added by myself or others if I have an update.
+- To delete fundraisers that have ended
+- To view the newest first and see added ones appear at the top.
+- To be able to search by title to see if a fundraiser I know is there. 
+- To be able to search by country of the fundraisers beneficiaries. 
+- View a limited number of fundraisers at a time so I don’t have to scroll forever if there are a lot of fundraisers.
+- View a range of fundraisers at a glance on one page and read more if I choose.
+- Read about the fundraisers- the target to raise, country of beneficiaries and have some details about it.
+- Have a clear link to the page I can donate to the fundraiser on.
 
 ### Design-
-
 
 #### Color Scheme
 
@@ -110,12 +101,6 @@ on buttons and features.  They are friendly and green is good for an action butt
 I used Oswald is the font for headers, it was a free font that is comparable to fonts I had seen on charity sites. It is clear 
 and bold and works well with the theme of urgency and giving. Lato was used as the main text has a soft friendly feel to keep a 
 chirpy feel to the details of what good will come from supporting the fundraisers.
-
-
-#### Layout
-
-#### Imagery
-
 
 ### Wireframes
 
