@@ -3,7 +3,7 @@
 {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
 <!--Displays an alert with a flash message set in app.py when action taken that requires feedback-->
 <div class="alert alert-dismissible fade show alert-txt text-center" role="alert">
-  <p> {{ message }} </p>
+  <h6> {{ message }} </h6>
   <button type="button" class="close alert-close " data-dismiss="alert" aria-label="Close">
     <i class="far fa-window-close"></i>
   </button>

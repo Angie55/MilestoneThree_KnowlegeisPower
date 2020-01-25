@@ -15,17 +15,17 @@
                 <form action="{{ url_for('update_fundraiser', fundraiser_id=fundraiser._id) }}" method="POST">
                     <!--Fundraiser name/title-->
                     <div class="form-group">
-                        <label for="name">Fundraiser Name/Title:</label>
+                        <label for="fundraiser_name">Fundraiser Name/Title:</label>
                         <input type="text" name="fundraiser_name" class="form-control" value="{{fundraiser.fundraiser_name}}" id="fundraiser_name" required>
                     </div>
                     <!--Fundraiser target-->
                     <div class="form-group">
-                        <label for="target">Target amount to raise:</label>
+                        <label for="fundraiser_target">Target amount to raise:</label>
                         <input type="number" name="fundraiser_target" class="form-control" value="{{fundraiser.fundraiser_target}}" id="fundraiser_target" required>
                     </div>
                     <!--Fundraiser country-->
                     <div class="form-group">
-                    <label for="country">Country of benificeries:</label>
+                    <label for="fundraiser_country">Country of beneficiaries:</label>
                     <select class="form-control selectpicker countrypicker" name="fundraiser_country" id="fundraiser_country" required>
                        <option value="{{fundraiser.fundraiser_country}}">{{fundraiser.fundraiser_country}}</option>
                        <option value="Afganistan">Afghanistan</option>
@@ -278,32 +278,38 @@
                     </div>
                     <!--Fundraiser image url-->
                     <div class="form-group">
-                        <label for="fund-image">Fundraiser image URL:</label>
+                        <label for="fundraiser_image">Fundraiser image URL:</label>
                         <input type="text" name="fundraiser_image" class="form-control" value="{{fundraiser.fundraiser_image}}" id="fundraiser_image" required>
                     </div>
                     <!--Fundraiser donation link-->
                     <div class="form-group">
-                        <label for="donation-link">Fundraiser donation page:</label>
+                        <label for="fundraiser_website_link">Fundraiser donation page:</label>
                         <input type="text" name="fundraiser_website_link" class="form-control" value="{{fundraiser.fundraiser_website_link}}" id="fundraiser_website_link" required>
                     </div>
                     <!--Fundraiser introduction-->
                     <div class="form-group">
-                        <label for="fundraiser-intro">Fundraiser introduction:</label><br>
+                        <label for="fundraiser_intro">Fundraiser introduction:</label><br>
                         <small  class="text-muted">Must be 240-450 characters long</small>
                         <textarea class="form-control" name="fundraiser_intro" id="fundraiser_intro" rows="5" minlength="240" maxlength="450" required>{{fundraiser.fundraiser_intro}}</textarea> 
                     </div>
                     <!--Fundraiser details-->
                      <div class="form-group">
-                        <label for="fundraiser-details">Fundraiser details:</label><br>
+                        <label for="fundraiser_details">Fundraiser details:</label><br>
                         <small class="text-muted">Must be a min of 240 characters long</small>
                         <textarea class="form-control" name="fundraiser_details" id="fundraiser_details" rows="12" minlength="240" required>{{fundraiser.fundraiser_details}}</textarea>
                     </div>
                     <!-- Edit Fundraiser submit button-->  
                     <button type="submit" class="btn form-btn green-button">Submit</button>
                 </form>
-                
+        
             </div>
         </div>
+        <!--Link back to all fundraisers page--> 
+        <div class="row text-center">
+            <div class="col-12 back-to-fundraisers">
+                <a href="{{ url_for('get_fundraisers') }}">Back to all fundraisers</a> 
+            </div>
+        </div> 
     </main>
 </div>
 

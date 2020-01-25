@@ -183,15 +183,6 @@ h1, h2, h3, h6 {
     margin-bottom: 50px;
 }
 
-/*--------------------------------- Fundraiser information page*/
-.fund-info-page {
-    margin-top: 50px;
-} 
-
-.fund-info-spacing {
-    margin-top: 80px;
-}
-
 .alert-close {
     color: #505050;
     font-size: 30px;
@@ -201,6 +192,15 @@ h1, h2, h3, h6 {
     background-color: #dcefbc;
     color: #505050;
     border: 5px solid #94c83d;
+}
+
+/*--------------------------------- Fundraiser information page*/
+.fund-info-page {
+    margin-top: 50px;
+} 
+
+.fund-info-spacing {
+    margin-top: 80px;
 }
 
 .donation-btn {
