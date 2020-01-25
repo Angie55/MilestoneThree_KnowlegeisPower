@@ -1,9 +1,8 @@
 import os
 import math
-from flask import Flask, render_template, redirect, request, url_for, flash, session
+from flask import Flask, render_template, redirect, request, url_for, flash
 from flask_pymongo import PyMongo, pymongo
 from bson.objectid import ObjectId
-from werkzeug.security import generate_password_hash, check_password_hash
 
 # creating instance of flask
 app = Flask(__name__)
@@ -17,25 +16,21 @@ app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 # creating an instance of PyMongo
 mongo = PyMongo(app)
 
-
 # displays home page
 @app.route('/')
 @app.route('/index')
 def index():
     return render_template("index.html")
     
-  
 @app.route('/contact_us')
 def contact_us():
     return render_template("contact-us.html")    
     
-
 # Read
 
 # displays fundraisers from the database on the fundraisers page  
 @app.route('/get_fundraisers')
 def get_fundraisers():
-    
     """
     The code below displays a limited number of fundraisers on a page
     with pagination. 
