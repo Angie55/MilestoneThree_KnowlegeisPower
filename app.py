@@ -22,10 +22,6 @@ mongo = PyMongo(app)
 def index():
     return render_template("index.html")
     
-@app.route('/contact_us', methods=['GET', 'POST'])
-def contact_us():
-    return render_template("contact-us.html")
-    
 # Read
 
 # displays fundraisers from the database on the fundraisers page
@@ -45,9 +41,9 @@ def get_fundraisers():
         (current_page - 1)*page_limit).limit(page_limit)
         
     return render_template("fundraisers.html",
-                          fundraisers=fundraiser,
-                          current_page=current_page,
-                          pages=pages)
+                           fundraisers=fundraiser,
+                           current_page=current_page,
+                           pages=pages)
     
 # display of individual fundraiser using id
 @app.route('/get_fundraisers/<fundraisers_id>')

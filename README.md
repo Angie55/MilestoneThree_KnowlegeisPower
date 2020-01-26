@@ -52,7 +52,7 @@ for the 3rd milestone project.
 
 6. [**Acknowledgements**](#acknowledgements)
     - [**Media**](#media)
-    - [**Code**](#code)
+    - [**Credits**](#credits)
     
 ---
 
@@ -374,6 +374,12 @@ Images were sourced from:
 
 - [Pixabay](https://pixabay.com/)- All other images apart from fundraisers added by users.
 
+I used 3 different fundraiser websites to source fundraisers to make sure they all displayed well. Fundraisers for testing were sourced from:
+
+- [Justgiving.com](https://www.justgiving.com/crowdfunding/childreninthegambia)
+- [Globalgiving.org](https://www.globalgiving.org/)
+- [gofundme.com](https://uk.gofundme.com/)
+
 ### Credits
 
 - The CRUD functions were created following tutorials by [Code Institute](https://codeinstitute.net/)
@@ -382,6 +388,7 @@ Images were sourced from:
 looked at the suggested code from mentors and students.  All code had to be modified to fit my project. The 
 pagination and search are examples or looking at various fellow students code and putting together what worked for me.
 
+---
 
 **Disclaimer**- This app was created for education purposes.
 
